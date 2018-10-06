@@ -1,0 +1,125 @@
+/*
+
+	Endless Hosting
+
+*/
+
+::-webkit-scrollbar-track {
+    background: #43A047;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #388E3C;
+	border-radius: 100px;
+	border: 2px #43A047 solid;
+}
+
+html,body {
+	background-color: #191919;
+	color: white;
+	font-family: Roboto;
+	font-weight: 300;
+	font-size: 24px;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	position: relative;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+:focus {
+	outline: none;
+}
+
+.navBar {
+	width: calc(100% - 32px);
+	background-color: #388E3C;
+	font-weight: bold;
+	height: 56px;
+	line-height: 56px;
+	padding: 0 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.navBar h1 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.content {
+	height: calc(100vh - 56px);
+}
+
+.hero {
+	background-color: #43A047;
+	height: calc(80vh - 56px);
+	position: absolute;
+	width: calc(100% - 32px);
+	text-align: center;
+	padding: 0 16px;
+}
+
+.heroHelper {
+	background-color: #43A047;
+	width: 105%;
+	height: 30vh;
+	transform: rotate(3deg);
+	position: absolute;
+	top: 75%;
+	right: -20px;
+}
+
+.header {
+	position: relative;
+	top: 30%;
+	z-index: 2;
+}
+
+.header h1 {
+	margin: 10px 0;
+}
+
+.header span {
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	-webkit-tap-highlight-color: transparent;
+	letter-spacing: .5px;
+	padding: 0 16px;
+	margin: 0 8px;
+	border-radius: 100px;
+	font-weight: normal;
+	height: 36px;
+	width: 120px;
+	font-size: 16px;
+}
+
+.signup {
+	background-color: #388E3C;
+}
+
+.discord {
+	border: 2px solid #388E3C;
+}
