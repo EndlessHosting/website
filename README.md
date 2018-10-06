@@ -12,4 +12,4 @@ Alexander's Branch just in case I don't fuck it up :/
 
 ##### Team A: HTML
 ##### Team B: CSS
-##### TEAM C: Assets
+##### Team C: Assets
