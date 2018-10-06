@@ -1,4 +1,4 @@
-#### Style: 
+#### Style: Material-like Design
 #### Theme: Dark
 #### Colors: 
 #### Other info: 
