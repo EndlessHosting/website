@@ -28,7 +28,6 @@ html,body {
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-	height: 100%;
 	position: relative;
 }
 
@@ -60,8 +59,39 @@ body::-webkit-scrollbar {
 	font-weight: 300;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	-webkit-tap-highlight-color: transparent;
+	letter-spacing: .5px;
+	padding: 0 16px;
+	margin: 0 8px;
+	border-radius: 100px;
+	font-weight: normal;
+	height: 36px;
+	width: 120px;
+	font-size: 16px;
+}
+
+.signupButton {
+	background-color: #388E3C;
+}
+
+.discordButton {
+	border: 2px solid #388E3C;
+}
+
 .content {
 	height: calc(100vh - 56px);
+}
+
+.heroContainer {
+	height: calc(95vh - 50px);
+	position: relative;
+	text-align: center;
 }
 
 .hero {
@@ -80,7 +110,7 @@ body::-webkit-scrollbar {
 	transform: rotate(3deg);
 	position: absolute;
 	top: 75%;
-	right: -20px;
+	right: -1%;
 }
 
 .header {
@@ -99,27 +129,49 @@ body::-webkit-scrollbar {
 	margin-bottom: 20px;
 }
 
-button {
-	background-color: transparent;
-	border: none;
-	color: white;
-	display: inline-block;
-	text-transform: uppercase;
-	-webkit-tap-highlight-color: transparent;
-	letter-spacing: .5px;
-	padding: 0 16px;
-	margin: 0 8px;
-	border-radius: 100px;
-	font-weight: normal;
-	height: 36px;
-	width: 120px;
-	font-size: 16px;
+.more {
+	font-size: 42px;
+	position: relative;
+	top: 85%;
+	opacity: .5;
+	-webkit-animation: more 1.7s linear infinite;
+	-moz-animation: more 1.7s linear infinite;
+	-o-animation: more 1.7s linear infinite;
+	animation: more 1.7s linear infinite;
 }
 
-.signup {
-	background-color: #388E3C;
+@-webkit-keyframes more {
+	0% {top: 82%;opacity: 0;}
+	15% {top: 82%;opacity: 0;}
+	50% {top: 85%;opacity: .5;}
+	85% {top: 88%;opacity: 0;}
+	100% {top: 88%;opacity: 0;}
 }
 
-.discord {
-	border: 2px solid #388E3C;
+@-moz-keyframes more {
+	0% {top: 82%;opacity: 0;}
+	15% {top: 82%;opacity: 0;}
+	50% {top: 85%;opacity: .5;}
+	85% {top: 88%;opacity: 0;}
+	100% {top: 88%;opacity: 0;}
+}
+
+@-o-keyframes more {
+	0% {top: 82%;opacity: 0;}
+	15% {top: 82%;opacity: 0;}
+	50% {top: 85%;opacity: .5;}
+	85% {top: 88%;opacity: 0;}
+	100% {top: 88%;opacity: 0;}
+}
+
+@keyframes more {
+	0% {top: 82%;opacity: 0;}
+	15% {top: 82%;opacity: 0;}
+	50% {top: 85%;opacity: .5;}
+	85% {top: 88%;opacity: 0;}
+	100% {top: 88%;opacity: 0;}
+}
+
+.infoContainer {
+	height: 40vh;
 }
