@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
 .navBar {
 	width: calc(100% - 32px);
 	background-color: #388E3C;
+	position: fixed;
 	font-weight: bold;
 	height: 56px;
 	line-height: 56px;
@@ -51,6 +52,7 @@ body::-webkit-scrollbar {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	z-index: 10;
 }
 
 .navBar h1 {

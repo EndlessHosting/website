@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+	<head>
     
-        <!-- Meta Tags -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#43A047" />
+		<!-- Meta Tags -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#43A047" />
         
-        <!-- OpenGraph -->
-        <meta property="og:title" content="Endless Hosting">
-        <meta property="og:site_name" content="Endless Hosting">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://dj-electro.me/632322.png">
-        <meta property="og:description" content="Endless Hosting provides free, cPanel powered hosting services. Try it today!">
+		<!-- OpenGraph -->
+		<meta property="og:title" content="Endless Hosting">
+		<meta property="og:site_name" content="Endless Hosting">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://dj-electro.me/632322.png">
+		<meta property="og:description" content="Endless Hosting provides free, cPanel powered hosting services. Try it today!">
         
-        <!-- StyleSheets -->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300" />
-        <link rel="stylesheet" type="text/css" href="css/ripple.css" />
-		<link rel="stylesheet" type="text/css" href="css/icons.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        
-        <title>Endless Hosting | Home</title>
-        
-    </head>
-    <body>
+		<!-- Preloader -->
+		<link rel="stylesheet" type="text/css" href="css/preloader.min.css" />
+		
+		<title>Endless Hosting | Home</title>
+		
+	</head>
+	<body>
 
+		<div id="preloader" style="width:100%;height:100%;background-color:#43A047;position:fixed;transition:.7s linear;z-index:100">
+			<div style="width:150px;height:150px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
+				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
+					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round" />
+				</svg>
+			</div>
+		</div>
+	
 		<div class="navBar"><h1>Endless Hosting</h1></div>
 		<div class="content">
 		
@@ -49,9 +54,29 @@
 			
 		</div>
 	
-    </body>
+	</body>
 	
-    <!-- JavaScript -->
-    <script type="text/javascript" src="js/ripple.js"></script>
-    
+	<!-- StyleSheets -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300" />
+	<link rel="stylesheet" type="text/css" href="css/ripple.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/ripple.js"></script>
+	<script type="text/javascript">
+		var element = document.getElementById("preloader")
+	
+		function hidePreloader() {
+			element.style.opacity = "0"
+			setTimeout(removePreloader , 2000)
+		}
+	
+		function removePreloader() {
+			element.parentNode.removeChild(element);
+		}
+		
+		window.onload = setTimeout(hidePreloader, 1500);
+	</script>
+	
 </html>
