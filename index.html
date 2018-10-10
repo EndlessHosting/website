@@ -12,7 +12,7 @@
 		<meta property="og:site_name" content="Endless Hosting">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://dj-electro.me/632322.png">
-		<meta property="og:description" content="Endless Hosting provides free, cPanel powered hosting services. Try it today!">
+		<meta property="og:description" content="Endless Hosting provides free cPanel powered hosting services. Try it today!">
         
 		<!-- Preloader -->
 		<link rel="stylesheet" type="text/css" href="css/preloader.min.css" />
@@ -22,7 +22,7 @@
 	</head>
 	<body>
 
-		<div id="preloader" style="width:100%;height:100%;background-color:#43A047;position:fixed;transition:.7s linear;z-index:100">
+		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;position:fixed;transition:.7s linear;z-index:100">
 			<div style="width:150px;height:150px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
 				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
 					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round" />
@@ -30,26 +30,42 @@
 			</div>
 		</div>
 	
-		<div class="navBar"><h1>Endless Hosting</h1></div>
-		<div class="content">
+		<div class="navBar"><div class="menu"><span class="eh eh-menu"></span></div><h1>Endless Hosting</h1></div>
 		
-			<div class="heroContainer">
-				<div class="hero">
-					<div class="header">
-						<h1>Endless Hosting</h1>
-						<span>Endless Hosting provides free shared hosting services for the community.</span>
-						<br />
-						<button class="signupButton waves-effect waves-light">Sign Up</button><button class="discordButton waves-effect waves-light">Discord</button>
-					</div>
-					
-					<!-- Don't touch me :( -->
-					<div class="heroHelper"></div>
+		<div class="heroContainer">
+			<div class="hero">
+				<div class="header">
+					<h1>Endless Hosting</h1>
+					<span>Endless Hosting provides free shared hosting services for the community.</span>
+					<br />
+					<a href="/signup" class="button normalButton waves-effect waves-light" target="_blank">Sign Up</a><a href="https://discord.gg/jVa63vC" class="button borderButton waves-effect waves-light" target="_blank">Discord</a>
 				</div>
-				<i class="more eh eh-more"></i>
+					
+				<!-- Don't touch me :( -->
+				<div class="heroHelper"></div>
+			</div>
+			<i class="more eh eh-more"></i>
+		</div>
+			
+		<div class="infoContainer">
+			<div class="about">
+				<h4>About Us</h4>
+				<p>Endless Hosting is committed to one person: you! We strive to provide the best service we can, 24 hours a day, 365 days a year.</p>
+			</div>
+				
+			<div class="services">
+				<h4>Services</h4>
+				<p>We provide reliable, high-availability services - so what matters to you always stays online.</p>
+			</div>
+				
+			<div class="partner">
+				<h4>Lorem ipsum</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque semper sem, nec semper tellus iaculis eget.</p>
 			</div>
 			
-			<div class="infoContainer">
-				<div class="about"></div><div class="services"></div><div class="signup"></div>
+			<div class="try">
+				<h4 style="text-">What are you waiting for?</h4>
+				<a href="/signup" class="button borderButton waves-effect waves-light" target="_blank">Sign Up</a>
 			</div>
 			
 		</div>
@@ -69,14 +85,14 @@
 	
 		function hidePreloader() {
 			element.style.opacity = "0"
-			setTimeout(removePreloader , 2000)
+			setTimeout(removePreloader , 700)
 		}
 	
 		function removePreloader() {
 			element.parentNode.removeChild(element);
 		}
 		
-		window.onload = setTimeout(hidePreloader, 1500);
+		window.onload = setTimeout(hidePreloader, 1000);
 	</script>
 	
 </html>

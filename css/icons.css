@@ -23,6 +23,8 @@
 
 .eh-menu:before {
 	content: "\e900";
+	height: 24px;
+	display: inline-block;
 }
 .eh-more:before {
 	content: "\f103";

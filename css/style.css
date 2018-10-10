@@ -55,43 +55,79 @@ body::-webkit-scrollbar {
 	z-index: 10;
 }
 
+.menu {
+	display: none;
+	width: 42px;
+	height: 42px;
+	vertical-align: middle;
+	position: relative;
+	bottom: 2px;
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.menu {
+		display: inline-block;
+	}
+	.navBar {
+		width: calc(100% - 22px);
+		padding: 0 16px 0 6px;
+	}
+}
+
 .navBar h1 {
+	display: inline-block;
 	margin: 0;
 	font-size: 24px;
 	font-weight: 300;
 }
 
-button {
+.navBar .eh-menu {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+.button {
 	background-color: transparent;
-	border: none;
-	color: white;
 	display: inline-block;
 	text-transform: uppercase;
 	-webkit-tap-highlight-color: transparent;
 	letter-spacing: .5px;
-	padding: 0 16px;
 	margin: 0 8px;
 	border-radius: 100px;
 	font-weight: normal;
-	height: 36px;
 	width: 120px;
+	height: 36px;
 	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
-.signupButton {
-	background-color: #388E3C;
+.button:hover {
+	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 }
 
-.discordButton {
-	border: 2px solid #388E3C;
+.normalButton {
+	background-color: #2E7D32;
+	line-height: 38px;
 }
 
-.content {
-	height: calc(100vh - 56px);
+.borderButton {
+	width: 116px;
+	height: 32px;
+	line-height: 34px;
+	border: 2px solid #2E7D32;
 }
 
 .heroContainer {
-	height: calc(95vh - 50px);
+	height: calc(105vh - 50px);
 	position: relative;
 	text-align: center;
 }
@@ -111,18 +147,19 @@ button {
 	height: 30vh;
 	transform: rotate(3deg);
 	position: absolute;
-	top: 75%;
-	right: -1%;
+	top: 85%;
+	right: -2%;
 }
 
 .header {
 	position: relative;
-	top: 30%;
+	top: 45%;
 	z-index: 2;
 }
 
 .header h1 {
 	margin: 10px 0;
+	font-size: 46px;
 }
 
 .header span {
@@ -143,37 +180,66 @@ button {
 }
 
 @-webkit-keyframes more {
-	0% {top: 82%;opacity: 0;}
-	15% {top: 82%;opacity: 0;}
-	50% {top: 85%;opacity: .5;}
-	85% {top: 88%;opacity: 0;}
-	100% {top: 88%;opacity: 0;}
+	0% {top: 80%;opacity: 0;}
+	15% {top: 80%;opacity: 0;}
+	50% {top: 83%;opacity: .5;}
+	85% {top: 86%;opacity: 0;}
+	100% {top: 86%;opacity: 0;}
 }
 
 @-moz-keyframes more {
-	0% {top: 82%;opacity: 0;}
-	15% {top: 82%;opacity: 0;}
-	50% {top: 85%;opacity: .5;}
-	85% {top: 88%;opacity: 0;}
-	100% {top: 88%;opacity: 0;}
+	0% {top: 80%;opacity: 0;}
+	15% {top: 80%;opacity: 0;}
+	50% {top: 83%;opacity: .5;}
+	85% {top: 86%;opacity: 0;}
+	100% {top: 86%;opacity: 0;}
 }
 
 @-o-keyframes more {
-	0% {top: 82%;opacity: 0;}
-	15% {top: 82%;opacity: 0;}
-	50% {top: 85%;opacity: .5;}
-	85% {top: 88%;opacity: 0;}
-	100% {top: 88%;opacity: 0;}
+	0% {top: 80%;opacity: 0;}
+	15% {top: 80%;opacity: 0;}
+	50% {top: 83%;opacity: .5;}
+	85% {top: 86%;opacity: 0;}
+	100% {top: 86%;opacity: 0;}
 }
 
 @keyframes more {
-	0% {top: 82%;opacity: 0;}
-	15% {top: 82%;opacity: 0;}
-	50% {top: 85%;opacity: .5;}
-	85% {top: 88%;opacity: 0;}
-	100% {top: 88%;opacity: 0;}
+	0% {top: 80%;opacity: 0;}
+	15% {top: 80%;opacity: 0;}
+	50% {top: 83%;opacity: .5;}
+	85% {top: 86%;opacity: 0;}
+	100% {top: 86%;opacity: 0;}
 }
 
 .infoContainer {
-	height: 40vh;
+	text-align: center;
+}
+
+.infoContainer h4 {
+	color: #2E7D32;
+	margin: 0 0 10px 0;
+}
+
+.infoContainer p {
+	font-size: 22px;
+	margin: 0 0 10px 0;
+}
+
+.about,.services,.partner {
+	display: inline-block;
+	width: 30%;
+	height: 150px;
+	vertical-align: top;
+}
+
+@media screen and (max-width: 980px) {
+	.about,.services,.partner {
+		width: 95%;
+		height: auto;
+		padding: 15px 0 20px 0;
+	}
+}
+
+.try .button {
+	margin-bottom: 25px;
 }
