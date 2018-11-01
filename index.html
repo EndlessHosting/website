@@ -5,7 +5,7 @@
 		<!-- Meta Tags -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="theme-color" content="#43A047" />
+		<meta name="theme-color" content="#43A047" /> <!-- Content should contain the color of the css variable "--mainColor-600". -->
         
 		<!-- OpenGraph -->
 		<meta property="og:title" content="Endless Hosting">
@@ -20,7 +20,7 @@
 		<title>Endless Hosting | Home</title>
 		
 	</head>
-	<body>
+	<body style="margin:0;">
 
 		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;position:fixed;transition:.7s linear;z-index:100">
 			<div style="width:150px;height:150px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
@@ -33,7 +33,7 @@
 		<div class="sideBarContainer hideSideBar">
 			<div class="contentDarken"></div>
 			<div class="sideBar">
-				<h1>Endless Hosting</h1>
+				<h1 style="margin:0;">Endless Hosting</h1>
 				<a href="" class="waves-effect waves-light active">Home</a>
 				<a href="/signup" class="waves-effect waves-light">Sign Up</a>
 				<a href="/faq" class="waves-effect waves-light">FAQ</a>
@@ -88,12 +88,11 @@
 				<a href="#plans" class="button borderButton waves-effect waves-light">Sign Up</a>
 			</div> -->
 			
-			
 			<!-- Plans -->
 			<div id="plans" class="plansContainer">
 			
 				<h3>Plans</h3>
-				<p>Choose one of our plans and start hosting websites today</p>
+				<p>Choose one of our plans and start hosting websites now!</p>
 				<div class="plan">
 					<div class="planName"><span>Plan #1</span></div>
 					<div class="planFeatures">
@@ -144,22 +143,24 @@
 						<a href="/signup/plan-3" class="button normalButton waves-effect waves-light">Buy</a>
 					</div>
 				</div>
-				
-			</div>
-			
-			<!-- Footer -->
-			<div class="footerContainer">
-			
-			</div>
-
-			
+			</div>	
 		</div>
 	
+			<!-- Footer -->
+			<div class="footerContainer">
+				<!-- Don't touch me :( -->
+				<div class="footerHelper"></div>
+				
+				<div class="footer">
+					<span>Endless Hosting</span>
+				</div>
+			</div>
+			
 	</body>
 	
-	<!-- StyleSheets
+	<!-- StyleSheets -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300" />
--->	<link rel="stylesheet" type="text/css" href="css/ripple.css" />
+	<link rel="stylesheet" type="text/css" href="css/ripple.css" />
 	<link rel="stylesheet" type="text/css" href="css/icons.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	

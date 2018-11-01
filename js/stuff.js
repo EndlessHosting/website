@@ -1,4 +1,4 @@
-var preloader = document.getElementById("preloader")
+var preloader = document.querySelector("#preloader")
 
 function hidePreloader() {
 	preloader.style.opacity = "0"

@@ -6,10 +6,10 @@
 
 :root {
 	--sideBarWidth: 225px;
-}
-
-::-webkit-scrollbar-track {
-    background: #43A047;
+	--mainColor-500: #4CAF50;
+	--mainColor-600: #43A047;
+	--mainColor-700: #388E3C;
+	--mainColor-800: #2E7D32;
 }
 
 ::-webkit-scrollbar {
@@ -17,10 +17,13 @@
     height: 0;
 }
 
+::-webkit-scrollbar-track {
+    background: var(--mainColor-600);
+}
+
 ::-webkit-scrollbar-thumb {
-	background: #388E3C;
+	background: var(--mainColor-700);
 	border-radius: 100px;
-	border: 2px #43A047 solid;
 }
 
 html,body {
@@ -30,10 +33,13 @@ html,body {
 	font-weight: 300;
 	font-size: 24px;
 	overflow-x: hidden;
-	margin: 0;
 	padding: 0;
 	position: relative;
 	overflow-anchor: none;
+}
+
+body {
+	overflow-y: hidden;
 }
 
 .noScroll {
@@ -46,7 +52,7 @@ html,body {
 
 .navBar {
 	width: calc(100% - 32px);
-	background-color: #388E3C;
+	background-color: var(--mainColor-700);
 	position: fixed;
 	font-weight: bold;
 	height: 56px;
@@ -92,7 +98,7 @@ html,body {
 .sideBar {
 	width: var(--sideBarWidth);
 	height: 100%;
-	background-color: #43A047;
+	background-color: var(--mainColor-600);
 	overflow-y: auto;
 }
 
@@ -102,11 +108,15 @@ html,body {
 	line-height: 56px;
 	padding: 0 16px;
 	display: block;
-	background-color: #388E3C;
-	display: inline-block;
-	margin: 0;
+	background-color: var(--mainColor-700);
+	display: block;
 	font-size: 22px;
 	font-weight: 300;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .sideBar a {
@@ -117,6 +127,12 @@ html,body {
 	color: white;
 	text-decoration: none;
 	font-size: 22px;
+	display: block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .sideBar .active {
@@ -163,20 +179,6 @@ html,body {
 	left: 0;
 }
 
-@media screen and (max-width: 600px) {
-	.menu,.sideBarContainer {
-		display: inline-block;
-	}
-	.navBar {
-		width: calc(100% - 22px);
-		padding: 0 16px 0 6px;
-	}
-}
-
-.hideSideBar {
-	display: none;
-}
-
 .navBar h1 {
 	display: inline-block;
 	margin: 0;
@@ -197,7 +199,7 @@ html,body {
 	width: 120px;
 	height: 36px;
 	line-height: 38px;
-	background-color: #2E7D32;
+	background-color: var(--mainColor-800);
 	display: inline-block;
 	text-transform: uppercase;
 	-webkit-tap-highlight-color: transparent;
@@ -222,7 +224,7 @@ html,body {
 	height: 32px;
 	line-height: 34px;
 	background-color: transparent;
-	border: 2px solid #2E7D32;
+	border: 2px solid var(--mainColor-800);
 }
 
 .heroContainer {
@@ -232,16 +234,21 @@ html,body {
 }
 
 .hero {
-	background-color: #43A047;
+	background-color: var(--mainColor-600);
+	width: calc(100% - 32px);
 	height: calc(80vh - 56px);
 	position: absolute;
-	width: calc(100% - 32px);
 	text-align: center;
 	padding: 0 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .heroHelper {
-	background-color: #43A047;
+	background-color: var(--mainColor-600);
 	width: 105%;
 	height: 30vh;
 	transform: rotate(3deg);
@@ -268,18 +275,33 @@ html,body {
 	margin-bottom: 10px;
 }
 
+@media screen and (max-width: 358px) {
+	.hero {
+		padding: 0;
+		width: 100%;
+	}
+	.header h1 {
+		font-size: 44px;
+	}
+}
+
 .infoContainer {
 	text-align: center;
 }
 
 .infoContainer h4,.plansContainer h3 {
-	color: #2E7D32;
-	margin: 0 0 10px 0;
+	color: var(--mainColor-800);
+	margin: 0 0 5px 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .infoContainer p {
 	font-size: 22px;
-	margin: 0 0 10px 0;
+	margin: 0 0 30px 0;
 }
 
 .about,.services,.partner {
@@ -310,8 +332,13 @@ html,body {
 .planName {
 	height: 50px;
 	line-height: 50px;
-	background-color: #43A047;
+	background-color: var(--mainColor-600);
 	border-radius: 5px 5px 0 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .planFeatures {
@@ -326,13 +353,18 @@ html,body {
 }
 
 span.ssh {
-	color: #43A047;
+	color: var(--mainColor-600);
 }
 
 .planPrice {
 	padding: 6px 0;
-	background-color: #43A047;
+	background-color: var(--mainColor-600);
 	border-radius: 0 0 5px 5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .planPrice span {
@@ -348,4 +380,57 @@ span.ssh {
 
 small {
 	font-size: small;
+}
+
+.footerContainer {
+	position: relative;
+	height: 40vh;
+}
+
+.footerHelper {
+	background-color: var(--mainColor-600);
+	width: 105%;
+	height: 20vh;
+	transform: rotate(-2deg);
+	position: relative;
+	top: 5vh;
+	right: 2%;
+}
+
+.footer {
+	height: 30vh;
+	position: relative;
+	bottom: 10vh;
+	background-color: var(--mainColor-600);
+	padding: 0 16px;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.footer span {
+	font-size: 28px;
+}
+
+@media screen and (max-width: 600px) {
+	.menu,.sideBarContainer {
+		display: inline-block;
+	}
+	.navBar {
+		width: calc(100% - 22px);
+		padding: 0 16px 0 6px;
+	}
+	.footer {
+		text-align: left;
+	}
+	.footer span {
+		font-size: 22px;
+	}
+}
+
+.hideSideBar {
+	display: none;
 }
