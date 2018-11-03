@@ -3,11 +3,13 @@
 	<head>
     
 		<!-- Meta Tags -->
+		
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#43A047" /> <!-- Content should contain the color of the css variable "--mainColor-600". -->
         
 		<!-- OpenGraph -->
+		
 		<meta property="og:title" content="Endless Hosting">
 		<meta property="og:site_name" content="Endless Hosting">
 		<meta property="og:type" content="website">
@@ -15,6 +17,7 @@
 		<meta property="og:description" content="Endless Hosting provides free cPanel powered hosting services. Try it today!">
         
 		<!-- Preloader -->
+		
 		<link rel="stylesheet" type="text/css" href="css/preloader.min.css" />
 		
 		<title>Endless Hosting | Home</title>
@@ -34,18 +37,30 @@
 			<div class="contentDarken"></div>
 			<div class="sideBar">
 				<h1 style="margin:0;">Endless Hosting</h1>
-				<a href="" class="waves-effect waves-light active">Home</a>
 				<a href="/signup" class="waves-effect waves-light">Sign Up</a>
 				<a href="/faq" class="waves-effect waves-light">FAQ</a>
 				<a href="/partner" class="waves-effect waves-light">Partner</a>
-				<a href="https://cpanel.theendlessweb.com:2083" class="waves-effect waves-light">WebPanel</a>
 				<a href="/contact" class="waves-effect waves-light">Contact</a>
-				<a href="https://status.theendlessweb.com" class="waves-effect waves-light">Status</a>
 			</div>
 			<div class="sideBarClose" onclick="closeSideBar()"></div>
 		</div>
 	
-		<div class="navBar"><div class="menu waves-effect waves-circle waves-light" onclick="openSideBar()"><span class="eh eh-menu"></span></div><h1>Endless Hosting</h1></div>
+		<!-- Navigation Bar -->
+	
+		<div class="navBar">
+			<div class="menu waves-effect waves-circle waves-light" onclick="openSideBar()">
+				<span class="eh eh-menu"></span>
+			</div>
+			<a href="/" class="logo">Endless Hosting</a>
+			
+			<div class="links">
+				<a href="/signup">Sign Up</a>
+				<a href="/faq">FAQ</a>
+				<a href="/partner">Partner</a>
+				<a href="/contact">Contact</a>
+			</div>
+			
+		</div>
 		
 		
 		<!-- Hero -->
@@ -56,7 +71,7 @@
 					<h1>Endless Hosting</h1>
 					<span>Endless Hosting provides free shared hosting services for the community.</span>
 					<br />
-					<a href="/login" class="button normalButton waves-effect waves-light" target="_blank">Login</a><a href="https://discord.gg/jVa63vC" class="button borderButton waves-effect waves-light" target="_blank">Discord</a>
+					<a href="https://cpanel.theendlessweb.com:2083/" class="button normalButton waves-effect waves-light" target="_blank">cPanel</a><a href="https://status.theendlessweb.com/" class="button borderButton waves-effect waves-light" target="_blank">Status</a>
 				</div>
 					
 				<!-- Don't touch me :( -->
@@ -65,30 +80,26 @@
 		</div>
 			
 			
-			<!-- Info -->
-			
+		<!-- Info -->
+		
 		<div class="infoContainer">
 			<div class="about">
-				<h4>About Us</h4>
+				<h4>Made for You</h4>
 				<p>Endless Hosting is committed to one person: you! We strive to provide the best service we can, 24 hours a day.</p>
 			</div>
 				
-			<div class="services">
-				<h4>Services</h4>
+			<div class="about">
+				<h4>Our Services</h4>
 				<p>We provide reliable, high-availability services - so what matters to you always stays online.</p>
 			</div>
 				
-			<div class="partner">
-				<h4>Lorem ipsum</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque semper sem, nec semper tellus iaculis eget.</p>
+			<div class="about">
+				<h4>About Us</h4>
+				<p>Endless Hosting is a small team of people who want to make hosting websites easy and reliable free of cost.</p>
 			</div>
 			
-			<!-- <div class="try">
-				<h4 style="text-">What are you waiting for?</h4>
-				<a href="#plans" class="button borderButton waves-effect waves-light">Sign Up</a>
-			</div> -->
-			
 			<!-- Plans -->
+			
 			<div id="plans" class="plansContainer">
 			
 				<h3>Plans</h3>
@@ -147,24 +158,39 @@
 		</div>
 	
 			<!-- Footer -->
+			
 			<div class="footerContainer">
 				<!-- Don't touch me :( -->
 				<div class="footerHelper"></div>
 				
 				<div class="footer">
-					<span>Endless Hosting</span>
+					<h3>Endless Hosting</h3>
+					
+					<div class="wrap">
+						<h4>Social</h4>
+						<a href="https://twitter.com/EndlessHosting_/" target="_blank" class="eh eh-twitter"></a><a href="https://github.com/EndlessHosting/" target="_blank" class="eh eh-github"></a><a href="https://discord.gg/jVa63vC/" target="_blank" class="eh eh-discord"></a>
+					</div>
+					
+					<div class="wrap">
+						<h4>Donate</h4>
+						<a href="https://paypal.me/Electromaster/" target="_blank" class="eh eh-paypal"></a></a><a href="https://patreon.com/EndlessHosting/" target="_blank" class="eh eh-patreon"></a>
+					</div>
+					
+					<p class="copyright">&copy; 2018 Endless Hosting</p>
 				</div>
 			</div>
 			
 	</body>
 	
 	<!-- StyleSheets -->
+	
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300" />
 	<link rel="stylesheet" type="text/css" href="css/ripple.css" />
 	<link rel="stylesheet" type="text/css" href="css/icons.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
 	<!-- JavaScript -->
+	
 	<script type="text/javascript" src="js/ripple.js"></script>
 	<script type="text/javascript" src="js/stuff.js"></script>
 
