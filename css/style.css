@@ -1,6 +1,7 @@
 /*
 
-	Endless Hosting
+	Made by Alexander
+	For Endless Hosting
 
 */
 
@@ -44,12 +45,12 @@ body {
 	overflow-y: hidden;
 }
 
-.noScroll {
-	overflow-y: hidden;
-}
-
 :focus {
 	outline: none;
+}
+
+.noScroll {
+	overflow-y: hidden;
 }
 
 .navBar {
@@ -195,6 +196,7 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
+	pointer-events: none;
 }
 
 .navBar .links {
@@ -324,7 +326,7 @@ a {
 
 .infoContainer p {
 	font-size: 22px;
-	margin: 0 0 10px 0;
+	margin: 0 0 15px 0;
 }
 
 .about {
@@ -346,6 +348,19 @@ a {
 	display: inline-block;
 	width: 230px;
 	margin: 20px 15px 0 15px;
+	transition: .4s ease-out;
+}
+
+.plan:nth-of-type(2) {
+	transform: scale(1.05) translateY(-8px);
+}
+
+.plan:hover {
+	transform: translateY(-10px);
+}
+
+.plan:nth-of-type(2):hover {
+	transform: scale(1.05) translateY(-15px);
 }
 
 .planName {
@@ -437,7 +452,7 @@ small {
 }
 
 .footer h4 {
-	width: 100px;
+	width: 250px;
 	font-weight: normal;
 	margin: 10px auto;
 	border-bottom: 2px solid white;
@@ -462,13 +477,28 @@ small {
 	margin: 0 32px;
 }
 
+.linkWrap {
+	display: inline-block;
+	margin: 0 4px;
+	width: 80px;
+}
+
+.linkWrap p {
+	margin: 0;
+	font-size: 18px;
+}
+
+.signUpPage .heroContainer {
+	height: 60vh;
+}
+
 @media screen and (max-width: 600px) {
 	.menu,.sideBarContainer {
 		display: inline-block;
 	}
 	.navBar {
 		width: calc(100% - 22px);
-		padding: 0 16px 0 6px;
+		padding: 0 16px 0 7px;
 	}
 	.navBar .links {
 		display: none;
@@ -485,6 +515,12 @@ small {
 	.footer .wrap {
 		display: block;
 		margin: 16px auto;
+	}
+	.linkWrap {
+		width: auto;
+	}
+	.linkWrap p {
+		display: none;
 	}
 }
 
