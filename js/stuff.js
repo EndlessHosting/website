@@ -40,7 +40,7 @@ function closeSideBar() {
 	contentDarken.classList.remove("animateOpenOpacity")
 	contentDarken.classList.add("animateCloseOpacity")
 	sideBar.classList.remove("openAnimation")
-	setTimeout(hideSideBar, 1000)
+	setTimeout(hideSideBar, 1050)
 	html.classList.remove("noScroll")
 	sideBarOpen.disabled = 'true'
 }
