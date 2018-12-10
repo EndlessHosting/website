@@ -2,7 +2,10 @@
 
 	Made by Alexander Bl.
 	For Endless Hosting
-
+	
+	Started: Saturday, October 6, 2018.
+	Finished: ...
+	
 */
 
 :root {
@@ -30,7 +33,7 @@
 }
 
 html,body {
-	background-color: #191919;
+	background-color: #191919 !important;
 	color: white;
 	font-family: Roboto;
 	font-weight: 300;
@@ -49,11 +52,15 @@ body {
 	outline: none;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .noScroll {
 	overflow-y: hidden;
 }
 
-.navBar,.sideBar,.hero,.infoContainer h4,.plansContainer h3,.plansContainer,.footer {
+.navBar,.sideBar,.hero,.infoContainer h4,.plansContainer h3,.plansContainer,.helperText,.textField label,.footer {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -62,7 +69,7 @@ body {
 }
 
 .navBar {
-	width: calc(100% - 32px);
+	width: 100vw;
 	background-color: var(--mainColor-700);
 	position: fixed;
 	font-weight: bold;
@@ -91,7 +98,7 @@ body {
 	top: 0;
 	left: -225px;
 	z-index: 15;
-	transition: .7s;
+	transition: .4s;
 }
 
 .contentDarken {
@@ -110,7 +117,6 @@ body {
 }
 
 .sideBar h1 {
-	width: calc(var(--sideBarWidth) - 32px);
 	height: 56px;
 	line-height: 56px;
 	padding: 0 16px;
@@ -122,7 +128,6 @@ body {
 }
 
 .sideBar a {
-	width: calc(var(--sideBarWidth) - 32px);
 	height: 42px;
 	line-height: 42px;
 	padding: 0 16px;
@@ -132,22 +137,21 @@ body {
 	display: block;
 }
 
-.sideBar .active {
-	width: calc(var(--sideBarWidth) - 32px - 2px);
+.signUpPage .sideBar a[href="/signup/"],.faqPage .sideBar .links a[href="/faq/"],.partnerPage .sideBar .links a[href="/partner/"],.contactPage .sideBar .links a[href="/contact/"] {
 	background-color: rgba(255,255,255,.05);
 	border-left: 2px solid white;
 }
 
 .sideBarClose {
-	width: calc(100% - var(--sideBarWidth));
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	top: 0;
+	left: var(--sideBarWidth);
 }
 
 .animateOpenOpacity {
-	animation: opacityOpen .7s linear;
+	animation: opacityOpen .5s linear;
 }
 
 @keyframes opacityOpen {
@@ -160,7 +164,7 @@ body {
 }
 
 .animateCloseOpacity {
-	animation: opacityClose 1.1s linear;
+	animation: opacityClose .6s linear;
 }
 
 @keyframes opacityClose {
@@ -195,19 +199,20 @@ body {
 
 .navBar .links {
 	display: inline-block;
-	float: right;
+	position: absolute;
+	right: 16px;
 }
 
 .navBar .links a {
 	font-weight: normal;
 	font-size: 20px;
+	height: 55px;
 	padding: 0 6px;
 	display: inline-block;
 }
 
-.navBar .active {
+.signUpPage .navBar .links a[href="/signup/"],.faqPage .navBar .links a[href="/faq/"],.partnerPage .navBar .links a[href="/partner/"],.contactPage .navBar .links a[href="/contact/"] {
 	border-bottom: 2px solid white;
-	height: 53px;
 }
 
 a {
@@ -226,16 +231,20 @@ a {
 	letter-spacing: .5px;
 	margin: 0 8px;
 	border-radius: 100px;
+	border: none;
 	font-weight: normal;
 	font-size: 16px;
 	text-decoration: none;
 	color: white;
-	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	transition: .4s;
+	cursor: pointer;
 }
 
 .button:hover {
+	background-color: var(--mainColor-700);
 	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 }
@@ -249,13 +258,14 @@ a {
 .heroContainer {
 	height: 100vh;
 	min-height: 390px;
+	padding-top: 56px;
 	position: relative;
 	text-align: center;
 }
 
 .hero {
 	background-color: var(--mainColor-600);
-	width: calc(100% - 32px);
+	width: 100vw;
 	height: 80vh;
 	min-height: 200px;
 	position: absolute;
@@ -270,7 +280,7 @@ a {
 	height: 400px;
 	transform: rotate(2deg);
 	position: absolute;
-	bottom: 3.25vh;
+	bottom: 30px;
 	right: -2%;
 }
 
@@ -278,6 +288,8 @@ a {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	padding: 0 16px;
 }
 
 .header h1 {
@@ -308,7 +320,7 @@ a {
 	text-align: center;
 }
 
-.infoContainer h4,.plansContainer h3 {
+.infoContainer h4,.plansContainer h3,.signUpPage .signUpContainer h4 {
 	color: var(--mainColor-800);
 	margin: 0 0 5px 0;
 }
@@ -345,7 +357,7 @@ a {
 }
 
 .plan:hover {
-	transform: translateY(-10px);
+	transform: translateY(-7px);
 }
 
 .plan:nth-of-type(2):hover {
@@ -410,27 +422,37 @@ small {
 }
 
 .footerContainer {
-	position: relative;
+	width: 100vw;
 	height: 250px;
+	position: relative;
+	bottom: 0;
+}
+
+@media screen and (min-height: 955px) {
+	html.signUpPage,.signUpPage body {
+		height: 100%;
+	}
+	.signUpPage .footerContainer {
+		position: absolute;
+	}
 }
 
 .footerHelper {
 	background-color: var(--mainColor-600);
 	width: 105%;
-	height: 50px;
+	height: 100px;
 	transform: rotate(-1deg);
 	position: relative;
-	top: 10%;
+	top: 15px;
 	right: 2%;
 }
 
 .footer {
-	width: calc(100vw - 32px);
+	width: 100vw;
 	height: 200px;
 	position: absolute;
 	bottom: 0;
 	background-color: var(--mainColor-600);
-	padding: 0 16px;
 	text-align: center;
 }
 
@@ -441,35 +463,31 @@ small {
 }
 
 .footer h4 {
-	width: 250px;
-	font-weight: normal;
+	max-width: 250px;
+	font-weight: 300;
 	margin: 10px auto;
 	border-bottom: 2px solid white;
 }
 
 .footer .eh {
-	margin: 0 8px;
+	margin: 0 16px;
 }
 
 .footer .wrap {
 	display: inline-block;
 	margin: 0 32px;
+	width: 230px;
 }
 
 .linkWrap {
 	display: inline-block;
-	margin: 0 2.5px;
-	width: 80px;
+	margin: 0 -3px;
+	width: 70px;
 }
 
 .linkWrap p {
 	margin: 0;
 	font-size: 18px;
-}
-
-.signUpPage .heroContainer {
-	height: 300px;
-	min-height: 0;
 }
 
 .signUpPage .heroContainer {
@@ -482,6 +500,127 @@ small {
 	min-height: 0;
 }
 
+.signUpPage .signUpContainer {
+	text-align: center;
+	padding: 16px 16px 0 16px;
+	min-height: 320px;
+}
+
+.signUpPage .signUpContainer .wrap {
+	position: absolute;
+	top: 55%;
+	height: calc(100vh - 460px);
+	transform: translateY(-50%);
+}
+
+.signUpPage input.button[type="submit"] {
+	margin-top: 16px;
+}
+
+@media screen and (max-height: 1250px) and (max-width: 577px) {
+	html.signUpPage, .signUpPage body {
+		height: auto;
+	}
+	.signUpPage .footerContainer {
+		position: relative;
+	}
+}
+
+.textField {
+	display: inline-block;
+	background-color: rgba(0,0,0,.1);
+	position: relative;
+	min-width: 250px;
+	max-width: 500px;
+	width: 40%;
+	margin: 12px 10px;
+	border-radius: 4px 4px 0 0;
+}
+
+input:not([type="submit"]) {
+	background-color: transparent;
+	color: #c5c5c5;
+	font-size: 16px;
+	caret-color: var(--mainColor-500);
+	padding: 20px 12px 6px;
+	display: block;
+	width: 100%;
+	height: 56px;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+input[required]:invalid:not(.default) {
+	border-bottom-color: #D32F2F;
+	caret-color: #D32F2F;
+}
+
+.textField label {
+	color: #999;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 12px;
+	top: 17px;
+	transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	-webkit-transition: 0.3s ease all;
+}
+
+input:focus ~ label, input:not([value=""]) ~ label {
+	top: 7px;
+	font-size: 12px;
+}
+
+input:not([value=""]) ~ label {
+	color: #999;
+	-webkit-transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	transition: 0.3s ease all;
+}
+
+input:focus ~ label {
+	color: var(--mainColor-500);
+}
+
+input[required] ~ label:after {
+	content: '*';
+	margin-left: 0;
+}
+
+input[required]:invalid:not(.default) ~ label, input[required]:focus ~ label:after {
+	color: #D32F2F;
+}
+
+.textField .bar:before, .textField .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0;
+	position: absolute;
+	background-color: var(--mainColor-500);
+	-webkit-transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	transition: 0.3s ease all;
+}
+
+input[required]:invalid:not(.default) ~ .bar:before, input[required]:invalid:not(.default) ~ .bar:after {
+	background-color: #D32F2F;
+}
+
+.textField .bar:before {
+	left: 50%;
+}
+
+.textField .bar:after {
+	right: 50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after, input:not([value=""]) ~ .bar:before, input:not([value=""]) ~ .bar:after {
+	width: 50%;
+}
+
 .copyright {
 	font-size: 16px;
 	position: absolute;
@@ -490,10 +629,17 @@ small {
 	left: 50%;
 	transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
+	white-space: nowrap;
 }
 
 .input .label {
 	transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.helperText {
+	color: #999;
+	font-size: 12px;
+	margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -501,23 +647,19 @@ small {
 		display: inline-block;
 	}
 	.navBar {
-		width: calc(100% - 22px);
 		padding: 0 16px 0 7px;
 	}
 	.navBar .links {
 		display: none;
 	}
 	.heroHelper {
-		bottom: 2vh;
+		bottom: 15px;
 	}
 	.footerContainer {
-		height: 325px;
+		height: 300px;
 	}
 	.footer {
 		height: 250px;
-	}
-	.footer h3 {
-		font-size: 22px;
 	}
 	.footer .wrap {
 		display: block;

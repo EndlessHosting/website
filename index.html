@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color:#388E3C">
 	<head>
     
 		<!-- Meta Tags -->
@@ -25,44 +25,21 @@
 	</head>
 	<body style="margin:0;">
 
-		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;position:fixed;transition:.7s linear;z-index:100">
-			<div style="width:150px;height:150px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
+		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;transition:.7s linear;position:fixed;z-index:100">
+			<div style="width:calc(100% - 32px);padding:0 16px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
 				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
 					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round" />
 				</svg>
+				<noscript><h5 style="color:white;font-family:Roboto,sans-serif;font-weight:300;margin:0">Your browser either doesn't seem to support javascript or you have disabled it.<br />Please switch to a supported browser or enable javascript to continue.</h5></noscript>
 			</div>
 		</div>
 	
-		<div class="sideBarContainer hideSideBar">
-			<div class="contentDarken"></div>
-			<div class="sideBar">
-				<h1 style="margin:0;">Endless Hosting</h1>
-				<a href="/signup" class="waves-effect waves-light">Sign Up</a>
-				<a href="/faq" class="waves-effect waves-light">FAQ</a>
-				<a href="/partner" class="waves-effect waves-light">Partner</a>
-				<a href="/contact" class="waves-effect waves-light">Contact</a>
-			</div>
-			<div class="sideBarClose" onclick="closeSideBar()"></div>
-		</div>
+		<div class="sideBarContainer hideSideBar"></div>
 	
 		<!-- Navigation Bar -->
 	
-		<div class="navBar">
-			<div class="menu waves-effect waves-circle waves-light" onclick="openSideBar()">
-				<i class="eh eh-menu"></i>
-			</div>
-			<a href="/" class="logo">Endless Hosting</a>
-			
-			<div class="links">
-				<a href="/signup">Sign Up</a>
-				<a href="/faq">FAQ</a>
-				<a href="/partner">Partner</a>
-				<a href="/contact">Contact</a>
-			</div>
-			
-		</div>
-		
-		
+		<div class="navBar"></div>
+
 		<!-- Hero -->
 		
 		<div class="heroContainer">
@@ -98,7 +75,7 @@
 			
 			<!-- Plans -->
 			
-			<div id="plans" class="plansContainer">
+			<div class="plansContainer">
 			
 				<h3>Plans</h3>
 				<p>Choose one of our plans and start hosting websites now!</p>
@@ -157,56 +134,20 @@
 	
 			<!-- Footer -->
 			
-			<div class="footerContainer">
-				<!-- Don't touch me :( -->
-				<div class="footerHelper"></div>
-				
-				<div class="footer">
-					<h3>Endless Hosting</h3>
-					
-					<div class="wrap">
-						<h4>Social</h4>
-						<a href="https://twitter.com/EndlessHosting_/" target="_blank" class="linkWrap">
-							<i class="eh eh-twitter"></i>
-							<p>Twitter</p>
-						</a>
-						<a href="https://github.com/EndlessHosting/" target="_blank" class="linkWrap">
-							<i class="eh eh-github"></i>
-							<p>Github</p>
-						</a>
-						<a href="https://discord.gg/jVa63vC/" target="_blank" class="linkWrap">
-							<i class="eh eh-discord"></i>
-							<p>Discord</p>
-						</a>
-					</div>
-					
-					<div class="wrap">
-						<h4>Donate</h4>
-						<a href="https://paypal.me/Electromaster/" target="_blank" class="linkWrap">
-							<i class="eh eh-paypal"></i>
-							<p>PayPal</p>
-						</a>
-						<a href="https://patreon.com/EndlessHosting/" target="_blank" class="linkWrap">
-							<i class="eh eh-patreon"></i>
-							<p>Patreon</p>
-						</a>
-					</div>
-					
-					<p class="copyright">&copy; 2017 – 2018 Endless Hosting</p>
-			</div>
+			<div class="footerContainer"></div>
 			
 	</body>
 	
 	<!-- StyleSheets -->
 	
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400" />
 	<link rel="stylesheet" type="text/css" href="css/ripple.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/icons.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
 	<!-- JavaScript -->
 	
-	<script type="text/javascript" src="js/ripple.js"></script>
+	<script type="text/javascript" src="js/ripple.min.js"></script>
 	<script type="text/javascript" src="js/stuff.js"></script>
 
 </html>
