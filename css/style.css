@@ -244,15 +244,22 @@ a {
 }
 
 .button:hover {
-	background-color: var(--mainColor-700);
 	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.normalButton:hover,.normalButton:focus {
+	background-color: var(--mainColor-700);
 }
 
 .borderButton {
 	line-height: 33px;
 	background-color: transparent;
 	border: 2px solid var(--mainColor-800);
+}
+
+.borderButton:hover,.borderButton:focus {
+	border-color: var(--mainColor-700);
 }
 
 .heroContainer {
