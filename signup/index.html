@@ -19,18 +19,19 @@
 		<!-- Preloader -->
 		
 		<link rel="stylesheet" type="text/css" href="../css/preloader.min.css" />
+		<noscript><link rel="stylesheet" type="text/css" href="../css/preloader-noscript.min.css" /></noscript>
 		
 		<title>Endless Hosting | SignUp</title>
 		
 	</head>
-	<body style="margin:0;background-color:#388E3C">
+	<body style="margin:0">
 
 		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;transition:.7s linear;position:fixed;z-index:100">
 			<div style="width:calc(100% - 32px);padding:0 16px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
 				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
 					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round" />
 				</svg>
-				<noscript><h5 style="color:white;font-family:Roboto,sans-serif;font-weight:300;margin:0">Your browser either doesn't seem to support javascript or you have disabled it.<br />Please switch to a supported browser or enable javascript to continue.</h5></noscript>
+				<h5 style="display:none;color:white;font-family:Roboto,sans-serif;font-weight:300;margin:0">Your browser either doesn't seem to support javascript or you have disabled it.<br />Please switch to a supported browser or enable javascript to continue.</h5>
 			</div>
 		</div>
 	
@@ -103,7 +104,7 @@
 				
 				<input class="button normalButton" type="submit" value="Sign Up" />
 					
-				</form>
+			</form>
 				
 		</div>
 	
@@ -124,5 +125,6 @@
 	
 	<script type="text/javascript" src="../js/ripple.min.js"></script>
 	<script type="text/javascript" src="../js/stuff.js"></script>
+	<script type="text/javascript" src="../js/preloader.min.js"></script>
 
 </html>

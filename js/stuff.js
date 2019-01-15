@@ -7,21 +7,6 @@
 	
 */
 
-/* Preloader */
-
-var preloader = document.querySelector("#preloader")
-
-function hidePreloader() {
-	preloader.style.opacity = "0"
-	setTimeout(removePreloader, 700)
-}
-
-function removePreloader() {
-	preloader.parentNode.removeChild(preloader)
-}
-	
-window.onload = setTimeout(hidePreloader, 1000)
-
 /* SideBar */
 
 var sideBar = document.querySelector(".sideBarContainer")
@@ -96,7 +81,8 @@ document.querySelector(".footerContainer").innerHTML =
 /* Stuff */
 
 var html = document.querySelector("html")
-var sideBarOpen = document.querySelector(".eh-menu")
+var sideBarOpen = document.querySelector(".menu")
+var sideBarClose = document.querySelector(".sideBarClose")
 var contentDarken = document.querySelector(".contentDarken")
 
 function hideSideBar() {
@@ -107,22 +93,48 @@ function someFix() {
 	sideBar.classList.add("openAnimation")
 }
 
+function sBCDisable() {
+	sideBarClose.removeAttribute("disabled")
+}
+
+function sBODisable() {
+	sideBarOpen.removeAttribute("disabled")
+}
+
 function openSideBar() {
-	sideBarOpen.disabled = 'false';
+	sideBarClose.setAttribute("disabled", "")
 	contentDarken.classList.remove("animateCloseOpacity")
 	contentDarken.classList.add("animateOpenOpacity")
 	sideBar.classList.remove("hideSideBar")
 	setTimeout(someFix, 50)
 	html.classList.add("noScroll")
-	sideBarOpen.disabled = 'true'
+	setTimeout(sBCDisable, 500)
 }
 
 function closeSideBar() {
-	sideBarOpen.disabled = 'false';
+	sideBarOpen.setAttribute("disabled", "")
 	contentDarken.classList.remove("animateOpenOpacity")
 	contentDarken.classList.add("animateCloseOpacity")
 	sideBar.classList.remove("openAnimation")
 	setTimeout(hideSideBar, 550)
 	html.classList.remove("noScroll")
-	sideBarOpen.disabled = 'true'
+	setTimeout(sBODisable, 600)
+}
+
+var question = document.getElementsByClassName("question")
+var i
+
+for (i = 0; i < question.length; i++) {
+	question[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var answer = this.nextElementSibling
+		if (answer.style.height) {
+			answer.style.height = null
+			answer.style.padding = null
+		}
+		else {
+			answer.style.height = answer.scrollHeight + 32 + "px"
+			answer.style.padding = "16px"
+		} 
+	})
 }
