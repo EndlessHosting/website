@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en" style="background-color:#388E3C">
+	<head>
     
-        <!-- Meta Tags -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="CHANGE THIS" />
-        <!-- OpenGraph -->
-        <meta property="og:title" content="Endless Hosting">
-        <meta property="og:site_name" content="Endless Hosting">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://dj-electro.me/632322.png">
-        <meta property="og:description" content="Endless Hosting provides free, cPanel powered hosting services. Try it today!">
-        <!-- StyleSheets -->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400" />
-        <link rel="stylesheet" type="text/css" href="css/ripple.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Meta Tags -->
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#43A047" /> <!-- Content should contain the color of the css variable "--mainColor-600". -->
         
-        <title>Endless Hosting | Home</title>
+		<!-- OpenGraph -->
+		
+		<meta property="og:title" content="Endless Hosting">
+		<meta property="og:site_name" content="Endless Hosting">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://dj-electro.me/632322.png">
+		<meta property="og:description" content="Endless Hosting provides free cPanel powered hosting services. Try it today!">
         
-    </head>
-    <body>
+		<!-- Preloader -->
+		
+		<link rel="stylesheet" type="text/css" href="css/preloader.min.css" />
+		<noscript><link rel="stylesheet" type="text/css" href="css/preloader-noscript.min.css" /></noscript>
+		
+		<title>Endless Hosting | Home</title>
+		
+	</head>
+	<body style="margin:0">
 
-    </body>
-    <!-- JavaScript -->
-    <script type="text/javascript" src="js/ripple.js"></script>
-    <script type="text/javascript" src="js/stuff.js"></script>
-    
+		<div id="preloader" style="width:100%;height:100%;background-color:#388E3C;transition:.7s linear;position:fixed;z-index:100">
+			<div style="width:calc(100% - 32px);padding:0 16px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
+				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
+					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round" />
+				</svg>
+				<h5 style="display:none;color:white;font-family:Roboto,sans-serif;font-weight:300;margin:0">Your browser either doesn't seem to support javascript or you have disabled it.<br />Please switch to a supported browser or enable javascript to continue.</h5>
+			</div>
+		</div>
+	
+		<div class="sideBarContainer hideSideBar"></div>
+	
+		<!-- Navigation Bar -->
+	
+		<div class="navBar"></div>
+
+		<!-- Hero -->
+		
+		<div class="heroContainer">
+			<div class="hero"></div>
+			<!-- Don't touch me :( -->
+			<div class="heroHelper"></div>
+			<div class="header">
+				<h1>Endless Hosting</h1>
+				<span>Endless Hosting provides free shared hosting services for the community.</span>
+				<br />
+				<a href="https://cpanel.theendlessweb.com:2083/" class="button normalButton waves-effect waves-light" target="_blank">cPanel</a><a href="https://status.theendlessweb.com/" class="button borderButton waves-effect waves-light" target="_blank">Status</a>
+			</div>
+		</div>
+			
+			
+		<!-- Info -->
+		
+		<div class="infoContainer">
+			<div class="about">
+				<h4>Made for You</h4>
+				<p>Endless Hosting is committed to one person: you! We strive to provide the best service we can, 24 hours a day.</p>
+			</div>
+				
+			<div class="about">
+				<h4>Our Services</h4>
+				<p>We provide reliable, high-availability services - so what matters to you always stays online.</p>
+			</div>
+				
+			<div class="about">
+				<h4>About Us</h4>
+				<p>Endless Hosting is a small team of people who want to make hosting websites easy and reliable free of cost.</p>
+			</div>
+		</div>
+		
+		<!-- Plans -->
+			
+		<div class="plansContainer">
+		
+			<h3>Plans</h3>
+			<p>Choose one of our plans and start hosting websites now!</p>
+			<div class="plan">
+				<div class="planName"><span>Plan #1</span></div>
+				<div class="planFeatures">
+					<span>700MB of Storage</span>
+					<span>10 Subdomains</span>
+					<span>5 MySQL DBs</span>
+					<span>2 FTP accounts</span>
+					<span>Unlimited Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span>No SSH Access</span>
+				</div>
+				<div class="planPrice">
+					<span>Free</span>
+					<a href="/signup" class="button normalButton waves-effect waves-light">Sign Up</a>
+				</div>
+			</div>
+			
+			<div class="plan">
+				<div class="planName"><span>Plan #2</span></div>
+				<div class="planFeatures">
+					<span>1.2GB of Storage</span>
+					<span>20 Subdomains</span>
+					<span>10 MySQL DBs</span>
+					<span>5 FTP accounts</span>
+					<span>Unlimited Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span>No SSH Access</span>
+				</div>
+				<div class="planPrice">
+					<span>$3<small>USD</small>/month</span>
+					<a href="/signup/plan-2" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+			
+			<div class="plan">
+				<div class="planName"><span>Plan #3</span></div>
+				<div class="planFeatures">
+					<span>1.2GB of Storage</span>
+					<span>20 Subdomains</span>
+					<span>10 MySQL DBs</span>
+					<span>5 FTP accounts</span>
+					<span>Unlimited Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span class="ssh">SSH Access</span>
+				</div>
+				<div class="planPrice">
+					<span>$5<small>USD</small>/month</span>
+					<a href="/signup/plan-3" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Footer -->
+			
+		<div class="footerContainer"></div>
+			
+	</body>
+	
+	<!-- StyleSheets -->
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400" />
+	<link rel="stylesheet" type="text/css" href="css/ripple.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- JavaScript -->
+	
+	<script type="text/javascript" src="js/ripple.min.js"></script>
+	<script type="text/javascript" src="js/stuff.js"></script>
+	<script type="text/javascript" src="js/preloader.min.js"></script>
+
 </html>
