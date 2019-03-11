@@ -9,34 +9,39 @@
 
 /* SideBar */
 
-var sideBar = document.querySelector(".sideBarContainer")
+var sideBar = document.querySelector(".sideBarContainer"),
+navBar = document.querySelector(".navBar")
 
 sideBar.innerHTML =
 			'<div class="contentDarken"></div>\n' +
 			'<div class="sideBar">\n' +
 				'<h1 style="margin:0;">Endless Hosting</h1>\n' +
-				'<a href="/signup/" class="waves-effect waves-light active">Sign Up</a>\n' +
+				'<a href="/" class="waves-effect waves-light">Home</a>\n' +
+				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
+				'<a href="/signup/" class="waves-effect waves-light">Sign Up</a>\n' +
+				'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
 				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
-				'<a href="/partner/" class="waves-effect waves-light">Partner</a>\n' +
-				'<a href="/contact/" class="waves-effect waves-light">Contact</a>\n' +
+				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
 				'<a href="https://cpanel.theendlessweb.com:2083/" class="waves-effect waves-light">cPanel</a>\n' +
 			'</div>\n' +
 			'<div class="sideBarClose" onclick="closeSideBar()"></div>'
 			
 /* Navigation Bar */
 
-document.querySelector(".navBar").innerHTML =
+navBar.innerHTML =
 			'<div class="menu waves-effect waves-circle waves-light" onclick="openSideBar()">\n' +
 				'<i class="eh eh-menu"></i>\n' +
 			'</div>\n' +
 			'<a href="/" class="logo">Endless Hosting</a>\n' +
 			
 			'<div class="links">\n' +
-				'<a href="/signup/"/>Sign Up</a>\n' +
+				'<a href="/">Home</a>\n' +
+				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
+				'<a href="/signup/">Sign Up</a>\n' +
+				'<a href="/about/">About</a>\n' +
 				'<a href="/faq/">FAQ</a>\n' +
-				'<a href="/partner/">Partner</a>\n' +
-				'<a href="/contact/">Contact</a>\n' +
-				'<a href="https://cpanel.theendlessweb.com:2083/" class="waves-effect waves-light">cPanel</a>\n' +
+				'<a href="https://support.theendlessweb.com/">Support</a>\n' +
+				'<a href="https://cpanel.theendlessweb.com:2083/">cPanel</a>\n' +
 			'</div>'
 
 /* Footer */
@@ -76,39 +81,36 @@ document.querySelector(".footerContainer").innerHTML =
 					'</a>\n' +
 				'</div>\n' +
 					
-			'<p class="copyright">&copy; 2017 – 2018 Endless Hosting</p>'
+			'<p class="copyright">&copy; 2017 – 2019 Endless Hosting</p>'
 			
 /* Stuff */
 
-var html = document.querySelector("html")
-var sideBarOpen = document.querySelector(".menu")
-var sideBarClose = document.querySelector(".sideBarClose")
-var contentDarken = document.querySelector(".contentDarken")
-
-function hideSideBar() {
-	sideBar.classList.add("hideSideBar")
-}
-
-function someFix() {
-	sideBar.classList.add("openAnimation")
-}
-
-function sBCDisable() {
-	sideBarClose.removeAttribute("disabled")
-}
-
-function sBODisable() {
-	sideBarOpen.removeAttribute("disabled")
-}
+var html = document.querySelector("html"),
+sideBarOpen = document.querySelector(".menu"),
+sideBarClose = document.querySelector(".sideBarClose"),
+contentDarken = document.querySelector(".contentDarken"),
+question = document.getElementsByClassName("question"),
+textFieldNodes = document.querySelectorAll(".textField input"),
+i,
+x
 
 function openSideBar() {
 	sideBarClose.setAttribute("disabled", "")
 	contentDarken.classList.remove("animateCloseOpacity")
 	contentDarken.classList.add("animateOpenOpacity")
 	sideBar.classList.remove("hideSideBar")
-	setTimeout(someFix, 50)
+	setTimeout(function() {
+		sideBar.classList.add("openAnimation")
+	},
+	50
+	)
+	
 	html.classList.add("noScroll")
-	setTimeout(sBCDisable, 500)
+	setTimeout(function() {
+		sideBarClose.removeAttribute("disabled")
+	},
+	500
+	)
 }
 
 function closeSideBar() {
@@ -116,13 +118,18 @@ function closeSideBar() {
 	contentDarken.classList.remove("animateOpenOpacity")
 	contentDarken.classList.add("animateCloseOpacity")
 	sideBar.classList.remove("openAnimation")
-	setTimeout(hideSideBar, 550)
+	setTimeout(function() {
+		sideBar.classList.add("hideSideBar")
+	},
+	550
+	)
 	html.classList.remove("noScroll")
-	setTimeout(sBODisable, 600)
+	setTimeout(function() {
+		sideBarOpen.removeAttribute("disabled")
+	},
+	600
+	)
 }
-
-var question = document.getElementsByClassName("question")
-var i
 
 for (i = 0; i < question.length; i++) {
 	question[i].addEventListener("click", function() {
@@ -136,5 +143,26 @@ for (i = 0; i < question.length; i++) {
 			answer.style.height = answer.scrollHeight + 32 + "px"
 			answer.style.padding = "16px"
 		} 
-	})
+	}
+	)
+}
+
+for (x = 0; x < textFieldNodes.length; x++) {
+	textFieldNodes[x].addEventListener("focusout", function() {
+		this.setAttribute("value", this.value);this.classList.remove("default")
+	}
+	)
+}
+
+var prevScrollpos = window.pageYOffset
+window.onscroll = function() {
+	var currentScrollPos = window.pageYOffset
+	if (prevScrollpos > currentScrollPos) {
+		sideBarOpen.removeAttribute("disabled")
+		navBar.style.top = null
+	} else {
+		sideBarOpen.setAttribute("disabled", "")
+		navBar.style.top = "-56px"
+	}
+	prevScrollpos = currentScrollPos
 }
