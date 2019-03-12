@@ -78,9 +78,10 @@ body {
 	height: 56px;
 	line-height: 56px;
 	padding: 0 16px;
-	transition: top .4s;
 	white-space: nowrap;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+	transition: .4s;
+	transition-property: top, box-shadow;
 	z-index: 10;
 }
 
@@ -118,7 +119,7 @@ body {
 	height: 100%;
 	background-color: var(--mainColor-600);
 	overflow-y: auto;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 }
 
 .sideBar h1 {
@@ -129,7 +130,7 @@ body {
 	background-color: var(--mainColor-700);
 	font-size: 22px;
 	font-weight: 300;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 }
 
 .sideBar a {
@@ -142,7 +143,7 @@ body {
 	display: block;
 }
 
-.homePage .sideBar a[href="/"],.signUpPage .sideBar a[href="/signup/"],.plansPage .sideBar a[href="/plans/"],.faqPage .sideBar a[href="/faq/"],.partnerPage .sideBar a[href="/partner/"],.contactPage .sideBar a[href="/contact/"] {
+.homePage .sideBar a[href="/"],.plansPage .sideBar a[href="/plans/"],.signUpPage .sideBar a[href="/signup/"],.aboutPage .sideBar a[href="/about/"],.faqPage .sideBar a[href="/faq/"],.partnerPage .sideBar a[href="/partner/"],.contactPage .sideBar a[href="/contact/"] {
 	background-color: rgba(255,255,255,.05);
 	border-left: 2px solid white;
 }
@@ -219,7 +220,7 @@ body {
 	display: inline-block;
 }
 
-.homePage .navBar a[href="/"]:not(.logo),.signUpPage .navBar .links a[href="/signup/"],.plansPage .navBar .links a[href="/plans/"],.faqPage .navBar .links a[href="/faq/"],.partnerPage .navBar .links a[href="/partner/"],.contactPage .navBar .links a[href="/contact/"] {
+.homePage .navBar a[href="/"]:not(.logo),.plansPage .navBar .links a[href="/plans/"],.signUpPage .navBar .links a[href="/signup/"],.aboutPage .navBar .links a[href="/about/"],.faqPage .navBar .links a[href="/faq/"],.partnerPage .navBar .links a[href="/partner/"],.contactPage .navBar .links a[href="/contact/"] {
 	border-bottom: 2px solid white;
 }
 
@@ -245,8 +246,7 @@ a {
 	text-decoration: none;
 	color: white;
 	-webkit-tap-highlight-color: transparent;
-	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
 	transition: .4s;
 	cursor: pointer;
 }
@@ -256,8 +256,7 @@ a {
 }
 
 .button:hover {
-	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
 }
 
 .normalButton:hover,.normalButton:focus {
@@ -362,17 +361,17 @@ codeblock {
 	}
 }
 
-.infoContainer {
+.infoContainer,.aboutContainer {
 	padding: 16px;
 	text-align: center;
 }
 
-.infoContainer h4,.plansContainer h3,.signUpPage .signUpContainer h4 {
+.infoContainer h4,.plansContainer h3,.signUpPage .signUpContainer h4,.aboutContainer h4 {
 	color: var(--mainColor-800);
 	margin: 0 0 8px 0;
 }
 
-.infoContainer p, .plansContainer p {
+.infoContainer p,.plansContainer p,.aboutContainer p {
 	font-size: 22px;
 	margin: 0 0 16px 0;
 }
@@ -380,14 +379,13 @@ codeblock {
 .about {
 	display: inline-block;
 	width: 30%;
-	height: 150px;
 	vertical-align: top;
+	margin: 16px 1.5%;
 }
 
 @media screen and (max-width: 980px) {
 	.about {
-		width: 100%;
-		height: auto;
+		width: 90%;
 	}
 }
 
@@ -587,7 +585,7 @@ input[required]:invalid:not(.default) {
 	transition: 0.3s ease all;
 }
 
-input:focus ~ label, input:not([value=""]) ~ label {
+input:focus ~ label,input:not([value=""]) ~ label {
 	top: 7px;
 	font-size: 12px;
 }
@@ -609,11 +607,11 @@ input[required] ~ label:after {
 	transition: 0.3s ease color;
 }
 
-input[required]:invalid:not(.default) ~ label, input[required]:focus ~ label:after {
+input[required]:invalid:not(.default) ~ label,input[required]:focus ~ label:after {
 	color: #D32F2F;
 }
 
-.textField .bar:before, .textField .bar:after {
+.textField .bar:before,.textField .bar:after {
 	content: '';
 	height: 2px;
 	width: 0;
@@ -624,7 +622,7 @@ input[required]:invalid:not(.default) ~ label, input[required]:focus ~ label:aft
 	transition: 0.3s ease all;
 }
 
-input[required]:invalid:not(.default) ~ .bar:before, input[required]:invalid:not(.default) ~ .bar:after {
+input[required]:invalid:not(.default) ~ .bar:before,input[required]:invalid:not(.default) ~ .bar:after {
 	background-color: #D32F2F;
 }
 
@@ -636,12 +634,12 @@ input[required]:invalid:not(.default) ~ .bar:before, input[required]:invalid:not
 	right: 50%;
 }
 
-input:focus ~ .bar:before, input:focus ~ .bar:after, input:not([value=""]) ~ .bar:before, input:not([value=""]) ~ .bar:after {
+input:focus ~ .bar:before,input:focus ~ .bar:after,input:not([value=""]) ~ .bar:before,input:not([value=""]) ~ .bar:after {
 	width: 50%;
 }
 
 .input .label {
-	transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .helperText {
@@ -680,10 +678,10 @@ input:focus ~ .bar:before, input:focus ~ .bar:after, input:not([value=""]) ~ .ba
 .faqPage .question .triangleHolder {
 	width: 21px;
 	height: 12px;
-	margin-left: 16px;
-	position: relative;
-	top: 22px;
-	float: right;
+    margin-left: 16px;
+    position: absolute;
+    top: 22px;
+    right: 16px;
 	transform: rotate(0);
 	transition: .5s;
 }
@@ -718,7 +716,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after, input:not([value=""]) ~ .ba
 }
 
 @media screen and (max-width: 780px) {
-	.menu, .sideBarContainer {
+	.menu,.sideBarContainer {
 		display: inline-block;
 	}
 	.navBar {

@@ -160,9 +160,11 @@ window.onscroll = function() {
 	if (prevScrollpos > currentScrollPos) {
 		sideBarOpen.removeAttribute("disabled")
 		navBar.style.top = null
+		navBar.style.boxShadow = null
 	} else {
 		sideBarOpen.setAttribute("disabled", "")
 		navBar.style.top = "-56px"
+		navBar.style.boxShadow = "none"
 	}
 	prevScrollpos = currentScrollPos
 }
