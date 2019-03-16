@@ -361,7 +361,7 @@ codeblock {
 	}
 }
 
-.infoContainer,.aboutContainer {
+.infoContainer,.signUpContainer,.aboutContainer {
 	padding: 16px;
 	text-align: center;
 }
