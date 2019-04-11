@@ -47,7 +47,6 @@ body {
 }
 
 body {
-	filter: invert();
 	overflow-y: hidden;
 	padding-bottom: 250px;
 }
