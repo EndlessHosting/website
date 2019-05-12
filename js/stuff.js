@@ -19,7 +19,7 @@ sideBar.innerHTML =
 				'<a href="/" class="waves-effect waves-light">Home</a>\n' +
 				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
 				'<a href="/signup/" class="waves-effect waves-light">Sign Up</a>\n' +
-				'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
+				//'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
 				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
 				'<a href="https://cpanel.theendlessweb.com:2083/" class="waves-effect waves-light">cPanel</a>\n' +
@@ -38,7 +38,7 @@ navBar.innerHTML =
 				'<a href="/">Home</a>\n' +
 				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
 				'<a href="/signup/">Sign Up</a>\n' +
-				'<a href="/about/">About</a>\n' +
+				//'<a href="/about/">About</a>\n' +
 				'<a href="/faq/">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/">Support</a>\n' +
 				'<a href="https://cpanel.theendlessweb.com:2083/">cPanel</a>\n' +
@@ -80,6 +80,7 @@ document.querySelector(".footerContainer").innerHTML =
 						'<p>Patreon</p>\n' +
 					'</a>\n' +
 				'</div>\n' +
+				'<script type="text/javascript">var spartezSupportChat = {url: "https://jira.theendlessweb.com",portal: 1,}</script><script type="text/javascript" src="https://jira.theendlessweb.com/download/resources/com.spartez.jira.plugins.support-chat/frontend/js/chat.js"></script>\n' +
 					
 			'<p class="copyright">&copy; 2017 – 2019 Endless Hosting</p>'
 			
