@@ -1,6 +1,3 @@
-# website
-Repository for our Website
+# Minified code
 
-# Progress
-
-You can see the Progress we're making on the `alex` branch.
+blah blah minify everything, reduce file size blah blah.
