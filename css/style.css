@@ -4,18 +4,23 @@
 	For Endless Hosting
 
 	Started: Saturday, October 6, 2018.
-	Finished: ...
+	Finished: Monday May 13, 2019.
 
 */
 
 :root {
 	--sideBarWidth: 200px;
 
-	/* Color Variables */
-	--mainColor-500: #333;
-	--mainColor-600: #aa7526; /* Background / Pirmary Color */
-	--mainColor-700: #aa7526; /* Titlebar */
-	--mainColor-800: #333; /* Button Colors */
+	/* Legacy Color Variables *
+	--mainColor-500: #4CAF50;
+	--mainColor-600: #43A047;
+	--mainColor-700: #388E3C;
+	--mainColor-800: #2E7D32;
+	*/
+	--mainColor-500: #7289DA;
+	--mainColor-600: #667BC4;
+	--mainColor-700: #5B6DAE;
+	--mainColor-800: #4F5F98;
 }
 
 ::-webkit-scrollbar {
@@ -32,8 +37,7 @@
 	border-radius: 100px;
 }
 
-html,
-body {
+html,body {
 	background-color: #191919 !important;
 	color: white;
 	font-family: Roboto;
@@ -63,15 +67,7 @@ body {
 	overflow-y: hidden;
 }
 
-.navBar,
-.sideBar,
-.hero,
-.infoContainer h4,
-.plansContainer h3,
-.plansContainer,
-.helperText,
-.textField label,
-.footer {
+.navBar,.sideBar,.hero,.infoContainer h4,.plansContainer h3,.plansContainer,.helperText,.textField label,.footer {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -88,7 +84,7 @@ body {
 	line-height: 56px;
 	padding: 0 16px;
 	white-space: nowrap;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 	transition: .4s;
 	transition-property: top, box-shadow;
 	z-index: 10;
@@ -116,7 +112,7 @@ body {
 }
 
 .contentDarken {
-	background-color: rgba(0, 0, 0, .35);
+	background-color: rgba(0,0,0,.35);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -128,7 +124,7 @@ body {
 	height: 100%;
 	background-color: var(--mainColor-600);
 	overflow-y: auto;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 }
 
 .sideBar h1 {
@@ -139,7 +135,7 @@ body {
 	background-color: var(--mainColor-700);
 	font-size: 22px;
 	font-weight: 300;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
 }
 
 .sideBar a {
@@ -152,14 +148,8 @@ body {
 	display: block;
 }
 
-.homePage .sideBar a[href="/"],
-.plansPage .sideBar a[href="/plans/"],
-.signUpPage .sideBar a[href="/signup/"],
-.aboutPage .sideBar a[href="/about/"],
-.faqPage .sideBar a[href="/faq/"],
-.partnerPage .sideBar a[href="/partner/"],
-.contactPage .sideBar a[href="/contact/"] {
-	background-color: rgba(255, 255, 255, .05);
+.homePage .sideBar a[href="/"],.plansPage .sideBar a[href="/plans/"],.signUpPage .sideBar a[href="/signup/"],.aboutPage .sideBar a[href="/about/"],.faqPage .sideBar a[href="/faq/"],.partnerPage .sideBar a[href="/partner/"],.contactPage .sideBar a[href="/contact/"] {
+	background-color: rgba(255,255,255,.05);
 	border-left: 2px solid white;
 }
 
@@ -171,8 +161,7 @@ body {
 	left: var(--sideBarWidth);
 }
 
-.menu[disabled],
-.sideBarClose[disabled] {
+.menu[disabled],.sideBarClose[disabled] {
 	pointer-events: none;
 }
 
@@ -218,7 +207,7 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%,-50%);
 	pointer-events: none;
 }
 
@@ -236,13 +225,7 @@ body {
 	display: inline-block;
 }
 
-.homePage .navBar a[href="/"]:not(.logo),
-.plansPage .navBar .links a[href="/plans/"],
-.signUpPage .navBar .links a[href="/signup/"],
-.aboutPage .navBar .links a[href="/about/"],
-.faqPage .navBar .links a[href="/faq/"],
-.partnerPage .navBar .links a[href="/partner/"],
-.contactPage .navBar .links a[href="/contact/"] {
+.homePage .navBar a[href="/"]:not(.logo),.plansPage .navBar .links a[href="/plans/"],.signUpPage .navBar .links a[href="/signup/"],.aboutPage .navBar .links a[href="/about/"],.faqPage .navBar .links a[href="/faq/"],.partnerPage .navBar .links a[href="/partner/"],.contactPage .navBar .links a[href="/contact/"] {
 	border-bottom: 2px solid white;
 }
 
@@ -268,7 +251,7 @@ a {
 	text-decoration: none;
 	color: white;
 	-webkit-tap-highlight-color: transparent;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
 	transition: .4s;
 	cursor: pointer;
 }
@@ -278,11 +261,10 @@ a {
 }
 
 .button:hover {
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
 }
 
-.normalButton:hover,
-.normalButton:focus {
+.normalButton:hover,.normalButton:focus {
 	background-color: var(--mainColor-700);
 }
 
@@ -292,8 +274,7 @@ a {
 	border: 2px solid var(--mainColor-800);
 }
 
-.borderButton:hover,
-.borderButton:focus {
+.borderButton:hover,.borderButton:focus {
 	border-color: var(--mainColor-700);
 }
 
@@ -385,24 +366,17 @@ codeblock {
 	}
 }
 
-.infoContainer,
-.signUpContainer,
-.aboutContainer {
+.infoContainer,.signUpContainer,.aboutContainer {
 	padding: 16px;
 	text-align: center;
 }
 
-.infoContainer h4,
-.plansContainer h3,
-.signUpPage .signUpContainer h4,
-.aboutContainer h4 {
+.infoContainer h4,.plansContainer h3,.signUpPage .signUpContainer h4,.aboutContainer h4 {
 	color: var(--mainColor-800);
 	margin: 0 0 8px 0;
 }
 
-.infoContainer p,
-.plansContainer p,
-.aboutContainer p {
+.infoContainer p,.plansContainer p,.aboutContainer p {
 	font-size: 22px;
 	margin: 0 0 16px 0;
 }
@@ -577,7 +551,7 @@ small {
 
 .textField {
 	display: inline-block;
-	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(0,0,0,.1);
 	position: relative;
 	min-width: 250px;
 	max-width: 500px;
@@ -588,7 +562,7 @@ small {
 
 input:not([type="submit"]) {
 	background-color: transparent;
-	color: #c5c5c5;
+	color: #C5C5C5;
 	font-size: 16px;
 	caret-color: var(--mainColor-500);
 	padding: 20px 12px 6px;
@@ -600,8 +574,8 @@ input:not([type="submit"]) {
 }
 
 input[required]:invalid:not(.default) {
-	border-bottom-color: #d32f2f;
-	caret-color: #d32f2f;
+	border-bottom-color: #D32F2F;
+	caret-color: #D32F2F;
 }
 
 .textField label {
@@ -616,8 +590,7 @@ input[required]:invalid:not(.default) {
 	transition: 0.3s ease all;
 }
 
-input:focus ~ label,
-input:not([value=""]) ~ label {
+input:focus ~ label,input:not([value=""]) ~ label {
 	top: 7px;
 	font-size: 12px;
 }
@@ -639,13 +612,11 @@ input[required] ~ label:after {
 	transition: 0.3s ease color;
 }
 
-input[required]:invalid:not(.default) ~ label,
-input[required]:focus ~ label:after {
-	color: #d32f2f;
+input[required]:invalid:not(.default) ~ label,input[required]:focus ~ label:after {
+	color: #D32F2F;
 }
 
-.textField .bar:before,
-.textField .bar:after {
+.textField .bar:before,.textField .bar:after {
 	content: '';
 	height: 2px;
 	width: 0;
@@ -656,9 +627,8 @@ input[required]:focus ~ label:after {
 	transition: 0.3s ease all;
 }
 
-input[required]:invalid:not(.default) ~ .bar:before,
-input[required]:invalid:not(.default) ~ .bar:after {
-	background-color: #d32f2f;
+input[required]:invalid:not(.default) ~ .bar:before,input[required]:invalid:not(.default) ~ .bar:after {
+	background-color: #D32F2F;
 }
 
 .textField .bar:before {
@@ -669,15 +639,12 @@ input[required]:invalid:not(.default) ~ .bar:after {
 	right: 50%;
 }
 
-input:focus ~ .bar:before,
-input:focus ~ .bar:after,
-input:not([value=""]) ~ .bar:before,
-input:not([value=""]) ~ .bar:after {
+input:focus ~ .bar:before,input:focus ~ .bar:after,input:not([value=""]) ~ .bar:before,input:not([value=""]) ~ .bar:after {
 	width: 50%;
 }
 
 .input .label {
-	transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .helperText {
@@ -716,10 +683,10 @@ input:not([value=""]) ~ .bar:after {
 .faqPage .question .triangleHolder {
 	width: 21px;
 	height: 12px;
-	margin-left: 16px;
-	position: absolute;
-	top: 22px;
-	right: 16px;
+    margin-left: 16px;
+    position: absolute;
+    top: 22px;
+    right: 16px;
 	transform: rotate(0);
 	transition: .5s;
 }
@@ -754,8 +721,7 @@ input:not([value=""]) ~ .bar:after {
 }
 
 @media screen and (max-width: 780px) {
-	.menu,
-	.sideBarContainer {
+	.menu,.sideBarContainer {
 		display: inline-block;
 	}
 	.navBar {
