@@ -1,2 +1,3 @@
-# Endless Hosting Website
-Alexander's Branch just in case I don't fuck it up :/
+# Minified code
+
+blah blah minify everything, reduce file size blah blah.
