@@ -1,5 +1,5 @@
-# website
-Repository for our Website
-# Progress
+# Endless Hosting Website
 
-You can see the Progress we're making on the `alex` branch.
+Repository for our prettified website version.
+
+For a minified version of our website go to `minified` branch.
