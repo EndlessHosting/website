@@ -214,11 +214,12 @@ body {
 }
 
 .navBar .links a {
+	height: 56px;
 	font-weight: normal;
 	font-size: 20px;
-	height: 55px;
 	padding: 0 6px;
-	display: inline-block
+	display: inline-block;
+	vertical-align: top
 }
 
 .homePage .navBar a[href="/"]:not(.logo),.plansPage .navBar .links a[href="/plans/"],.signUpPage .navBar .links a[href="/signup/"],.aboutPage .navBar .links a[href="/about/"],.faqPage .navBar .links a[href="/faq/"],.partnerPage .navBar .links a[href="/partner/"],.contactPage .navBar .links a[href="/contact/"] {
@@ -365,6 +366,7 @@ codeblock {
 .alertContainer {
 	max-width: 60%;
 	height: 0;
+	padding: 0 16px;
 	position: relative;
 	border-radius: 2px;
 	margin: auto;
