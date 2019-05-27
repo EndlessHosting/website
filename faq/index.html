@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="faqPage" lang="en" style="background-color:#5B6DAE">
+	<head>
+	
+		<!-- Meta Tags -->
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#667BC4"> <!-- Content should contain the color of the css variable "--mainColor-600". -->
+		
+		<!-- OpenGraph -->
+		
+		<meta property="og:title" content="Endless Hosting">
+		<meta property="og:site_name" content="Endless Hosting">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://endlcdn.site/assets/ehlogoround.png">
+		<meta property="og:description" content="Endless Hosting provides free cPanel powered hosting services. Try it today!">
+		
+		<!-- Favicon -->
+		
+		<link rel="shortcut icon" type="image/png" href="https://endlcdn.site/assets/ehlogoround.png">
+		
+		<!-- Preloader -->
+		
+		<link rel="stylesheet" type="text/css" href="../css/preloader.css">
+		<noscript><link rel="stylesheet" type="text/css" href="../css/preloader-noscript.css"></noscript>
+		
+		<title>Endless Hosting | FAQ</title>
+		
+	</head>
+	<body style="margin:0">
+
+		<div id="preloader" style="width:100%;height:100%;background-color:#5B6DAE;transition:.7s linear;position:fixed;z-index:100">
+			<div style="width:calc(100% - 32px);padding:0 16px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);text-align:center">
+				<svg viewBox="25 25 50 50" style="-webkit-animation:rotate 2s linear infinite;animation:rotate 2s linear infinite;-webkit-transform-origin:center center;transform-origin:center center;width:150px">
+					<circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2" stroke-miterlimit="10" style="stroke-dasharray:1, 200;stroke-dashoffset:0;-webkit-animation:dash 1.5s ease-in-out infinite;animation:dash 1.5s ease-in-out infinite;stroke-linecap:round">
+				</svg>
+				<h5 style="display:none;color:white;font-family:Roboto,sans-serif;font-weight:300;margin:0">Your browser either doesn't seem to support javascript or you have disabled it.<br>Please switch to a supported browser or enable javascript to continue.</h5>
+			</div>
+		</div>
+	
+		<div class="sideBarContainer hideSideBar"></div>
+	
+		<!-- Navigation Bar -->
+	
+		<div class="navBar"></div>
+		
+		
+		<!-- Hero -->
+		
+		<div class="heroContainer">
+			<div class="hero"></div>
+			
+			<!-- Don't touch -->
+			<div class="heroHelper"></div>
+			
+			<div class="header">
+				<h1>FAQ</h1>
+				<span>Here you can read some of our Frequently Asked Questions regarding our service.<br>Please read them before opening a support ticket!</span>
+			</div>
+			
+		</div>
+	
+		<div class="faqContainer">
+			
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>How long does account creation take?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>Account creation can take as long as 2 days. If your account has not been created in more than 2 days then please open a support ticket.</span>
+				</div>
+			</div>
+		
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>How do I add my domain?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>To add your domain you will have to update your nameservers or DNS records. Our nameservers are <code>ns1.theendlessweb.com</code> and <code>ns2.theendlessweb.com</code>. Alternatively, you can use A records and point them to our IP address <code>149.56.38.19</code> or CNAME records and point them at our domain <code>endl.site</code>. <br><br>Note: Using A and CNAME records will not let you edit DNS records in cPanel.</span>
+				</div>
+			</div>
+			
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>How do I setup HTTPS/SSL?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>Go to SSL/TLS Status under Security in cPanel and click Run AutoSSL. It might take some time for your SSL certificate to arrive at your domain.</span>
+				</div>
+			</div>
+			
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>How do I redirect to HTTPS?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>To automatically redirect your website to go to HTTPS you have to make a file named <code>.htaccess</code> in the directory your domain is located in and put the following inside it: <br><br><codeblock>RewriteEngine On<br>RewriteCond %{HTTPS} !=on<br>RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]</codeblock>
+					</span>
+				</div>
+			</div>
+			
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>How can I contact support?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>You can either submit a support ticket or start a live chat (if available) <a href="https://support.theendlessweb.com/">here</a>. We also have community support in our <a href="https://discord.gg/jVa63vC">Discord server</a>.</span>
+				</div>
+			</div>
+			
+			<div class="accordion">
+				<div class="question waves-effect waves-light">
+					<span>Where are your servers located?</span>
+					<div class="triangleHolder">
+						<div class="triangle"></div>
+					</div>
+				</div>
+				<div class="answer">
+					<span>Endless Hosting is hosted inside the InterconnX Datacenter in Houston, Texas</span>
+				</div>
+			</div>
+			
+		</div>
+	
+		<!-- Footer -->
+			
+		<div class="footerContainer"></div>
+			
+	</body>
+	
+	<!-- StyleSheets -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+	<link rel="stylesheet" type="text/css" href="../css/ripple.css">
+	<link rel="stylesheet" type="text/css" href="../css/icons.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<!-- JavaScript -->
+	
+	<script type="text/javascript" src="../js/ripple.js"></script>
+	<script type="text/javascript" src="../js/stuff.js"></script>
+	<script type="text/javascript" src="../js/preloader.js"></script>
+	<script type="text/javascript" src="https://jira.theendlessweb.com/download/resources/com.spartez.jira.plugins.support-chat/frontend/js/chat.js"></script>
+
+</html>
