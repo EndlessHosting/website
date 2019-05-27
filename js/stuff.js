@@ -252,7 +252,7 @@ if (document.querySelector(".signUpPage")) {
 		httpreq.onreadystatechange = function() {
 			if (this.readyState == 4) {
 				if (this.status == 200) {
-					formAlert("Success! Your request for account creation with username " + textFieldNodes[1].value + "has been sent!", "success")
+					formAlert("Success! Your request for account creation with username " + textFieldNodes[2].value + " has been sent!", "success")
 				}
 				else if (this.status == 429) {
 					formAlert("Error " + this.status + ": " + this.statusText + "\nYou are sending too many requests and have been ratelimited. Please wait a few minutes and try again.", "warning")
