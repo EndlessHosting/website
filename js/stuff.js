@@ -248,6 +248,7 @@ if (document.querySelector(".signUpPage")) {
 	}
 
 	function sendForm() {
+		var parameters = "name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3] + "&company=" + textFieldNodes[4] + "&referrer=" + textFieldNodes[5] + "&response=" + document.querySelector(".g-recaptcha") + "&acceptToSPP=" + ToSPPCheckBox.checked
 		httpreq = new XMLHttpRequest()
 		httpreq.onreadystatechange = function() {
 			if (this.readyState == 4) {
@@ -255,7 +256,7 @@ if (document.querySelector(".signUpPage")) {
 					formAlert("Success! Your request for account creation with username " + textFieldNodes[2].value + " has been sent!", "success")
 				}
 				else if (this.status == 429) {
-					formAlert("Error " + this.status + ": " + this.statusText + "\nYou are sending too many requests and have been ratelimited. Please wait a few minutes and try again.", "warning")
+					formAlert("Error " + this.status + ": " + this.statusText + "\nYou are sending too many requests and have been ratelimited. Please wait a few minutes and try again.", "error")
 				}
 				else {
 					formAlert("Error " + this.status + ": " + this.statusText + "\nPlease try again or contact an administrator to resolve this issue.", "error")
@@ -263,6 +264,6 @@ if (document.querySelector(".signUpPage")) {
 			}
 		}
 		httpreq.open("POST", "/processsignup.php", true)
-		httpreq.send("name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3] + "&company=" + textFieldNodes[4] + "&referrer=" + textFieldNodes[5] + "&response=" + document.querySelector(".g-recaptcha") + "&acceptToSPP=" + ToSPPCheckBox.checked)
+		httpreq.send(parameters)
 	}
 }
