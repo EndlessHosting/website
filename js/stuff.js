@@ -234,6 +234,9 @@ if (document.querySelector(".signUpPage")) {
 		}
 		if (invalidInput || RegExp("[a-z0-9]$").test(textFieldNodes[2].value) == false) {
 			formAlert("Please make sure all fields are valid.", "warning")
+			for (x = 0; x < textFieldNodes.length; x++) {
+				textFieldNodes[x].classList.remove("default")
+			}
 			return false
 		}
 		else if (grecaptcha && grecaptcha.getResponse().length == 0) {
