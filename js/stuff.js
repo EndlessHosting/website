@@ -248,7 +248,6 @@ if (document.querySelector(".signUpPage")) {
 	}
 
 	function sendForm() {
-		var parameters = "name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3] + "&company=" + textFieldNodes[4] + "&referrer=" + textFieldNodes[5] + "&response=" + document.querySelector(".g-recaptcha") + "&acceptToSPP=" + ToSPPCheckBox.checked
 		httpreq = new XMLHttpRequest()
 		httpreq.onreadystatechange = function() {
 			if (this.readyState == 4) {
@@ -264,6 +263,6 @@ if (document.querySelector(".signUpPage")) {
 			}
 		}
 		httpreq.open("POST", "/processsignup.php", true)
-		httpreq.send(parameters)
+		httpreq.send("name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3].value + "&company=" + textFieldNodes[4].value + "&referrer=" + textFieldNodes[5].value + "&response=" + document.querySelector(".g-recaptcha").innerHTML + "&acceptToSPP=" + ToSPPCheckBox.checked)
 	}
 }
