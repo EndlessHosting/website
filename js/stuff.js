@@ -266,6 +266,7 @@ if (document.querySelector(".signUpPage")) {
 			}
 		}
 		httpreq.open("POST", "/processsignup.php", true)
+		httpreq.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8")
 		httpreq.send("name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3].value + "&company=" + textFieldNodes[4].value + "&referrer=" + textFieldNodes[5].value + "&response=" + document.querySelector(".g-recaptcha").innerHTML + "&acceptToSPP=" + ToSPPCheckBox.checked)
 	}
 }
