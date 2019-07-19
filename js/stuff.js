@@ -28,7 +28,7 @@ sideBar.innerHTML =
 				//'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
 				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
-				'<a href="https://cpanel.theendlessweb.com:2083/" class="waves-effect waves-light">cPanel</a>\n' +
+				'<a href="https://da.theendlessweb.com:2222/" class="waves-effect waves-light">Web Panel</a>\n' +
 			'</div>\n' +
 			'<div class="sideBarClose" onclick="closeSideBar()"></div>'
 			
@@ -47,7 +47,7 @@ navBar.innerHTML =
 				//'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
 				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
-				'<a href="https://cpanel.theendlessweb.com:2083/" class="waves-effect waves-light">cPanel</a>\n' +
+				'<a href="https://da.theendlessweb.com:2222/" class="waves-effect waves-light">Web Panel</a>\n' +
 			'</div>'
 
 /* Footer */
