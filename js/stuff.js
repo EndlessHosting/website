@@ -61,7 +61,7 @@ document.querySelector(".footerContainer").innerHTML =
 					
 				'<div class="wrap">\n' +
 					'<h4>Social</h4>\n' +
-					'<a href="https://twitter.com/EndlessHosting_/" target="_blank" class="linkWrap">\n' +
+					'<a href="https://twitter.com/Endless_Hosting/" target="_blank" class="linkWrap">\n' +
 						'<i class="eh eh-twitter"></i>\n' +
 						'<p>Twitter</p>\n' +
 					'</a>\n' +
