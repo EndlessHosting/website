@@ -426,7 +426,7 @@ codeblock {
 	transition: 0.4s ease-out
 }
 
-.plan:nth-of-type(2),.plan:nth-of-type(5) {
+.plan:nth-of-type(2), .plan:nth-of-type(5), .plan:nth-of-type(7) {
 	transform: scale(1.05) translateY(-8px)
 }
 
@@ -434,16 +434,16 @@ codeblock {
 	transform: translateY(-7px)
 }
 
-.plan:nth-of-type(2):hover,.plan:nth-of-type(5):hover {
+.plan:nth-of-type(2):hover, .plan:nth-of-type(5):hover, .plan:nth-of-type(7):hover {
 	transform: scale(1.05) translateY(-15px)
 }
 
 @media screen and (max-width: 791px) {
-	.plan:nth-of-type(2),.plan:nth-of-type(5) {
+	.plan:nth-of-type(2), .plan:nth-of-type(5), .plan:nth-of-type(7) {
 		transform: none
 	}
 
-	.plan:nth-of-type(2):hover,.plan:nth-of-type(5):hover {
+	.plan:nth-of-type(2):hover,.plan:nth-of-type(5):hover, .plan:nth-of-type(7):hover {
 		transform: translateY(-10px)
 	}
 }
