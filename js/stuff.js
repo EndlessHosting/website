@@ -61,7 +61,7 @@ document.querySelector(".footerContainer").innerHTML =
 					
 				'<div class="wrap">\n' +
 					'<h4>Social</h4>\n' +
-					'<a href="https://twitter.com/Endless_Hosting/" target="_blank" class="linkWrap">\n' +
+					'<a href="https://twitter.com/EndlessHosting_/" target="_blank" class="linkWrap">\n' +
 						'<i class="eh eh-twitter"></i>\n' +
 						'<p>Twitter</p>\n' +
 					'</a>\n' +
@@ -188,15 +188,18 @@ if (document.querySelector(".signUpPage")) {
 
 	var alertContainer = document.querySelector(".alertContainer"),
 	alertText = document.querySelector(".alertContainer span"),
-	ToSPPCheckBox = document.querySelector(".checkBoxPlaceholder input")
+	ToSPPCheckBox = document.querySelector(".checkBoxPlaceholder input"),
+	timer = 0
 
 	ToSPPCheckBox.checked = false
 
 	document.querySelector(".signUpSubmit").addEventListener("click", validateForm)
 
 	function formAlert(alertTextString, alertType) {//alertText.innerText = alertTextString
-
-		if (alertContainer.style.height > 0 + "px" && alertText.innerText != alertTextString) {
+		if (alertType == undefined) {
+			console.error("Alert type was not inserted, alert will not appear.")
+		}
+		else if (alertContainer.style.height > 0 + "px" && alertText.innerText != alertTextString) {
 			alertContainer.style.height = 0
 			setTimeout(function() {
 				alertText.innerText = alertTextString
@@ -226,6 +229,11 @@ if (document.querySelector(".signUpPage")) {
 	}
 
 	function validateForm() {
+		if (timer != 0) {
+			formAlert("Your request was already submitted, please wait " + timer + " more second(s) to submit another one.", "error")
+			return false
+		}
+
 		invalidInput = false
 		for (x = 0; x < textFieldNodes.length; x++) {
 			if (textFieldNodes[x].validity.valid == false) {
@@ -268,5 +276,17 @@ if (document.querySelector(".signUpPage")) {
 		httpreq.open("POST", "/processsignup.php", true)
 		httpreq.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8")
 		httpreq.send("name=" + textFieldNodes[0].value + "&last_name=" + textFieldNodes[1].value + "&username=" + textFieldNodes[2].value + "&email=" + textFieldNodes[3].value + "&company=" + textFieldNodes[4].value + "&referrer=" + textFieldNodes[5].value + "&response=" + document.querySelector(".g-recaptcha").innerHTML + "&acceptToSPP=" + ToSPPCheckBox.checked)
+
+		timer = 10
+		ratelimit = setInterval(timerStart, 1000)
+
+		function timerStart() {
+			if (timer == 0) {
+				clearInterval(ratelimit)
+			}
+			else {
+				timer -= 1
+			}
+		}
 	}
 }
