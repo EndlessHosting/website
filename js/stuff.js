@@ -230,7 +230,7 @@ if (document.querySelector(".signUpPage")) {
 
 	function validateForm() {
 		if (timer != 0) {
-			formAlert("Your request was already submitted, please wait " + timer + " more second(s) to submit another one.", "error")
+			formAlert("Your request was already submitted, please wait " + timer + " more second(s) to submit another one.", "warning")
 			return false
 		}
 
