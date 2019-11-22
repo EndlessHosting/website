@@ -229,41 +229,48 @@ if (document.querySelector(".signUpPage")) {
 	}
 
 	function validateForm() {
-		if (timer != 0) {
+		if (timer == 0) {
 			formAlert("Your request was already submitted, please wait " + timer + " more second(s) to submit another one.", "warning")
-			return false
-		}
-
-		invalidInput = false
-		for (x = 0; x < textFieldNodes.length; x++) {
-			if (textFieldNodes[x].validity.valid == false) {
-				invalidInput = true
-			}
-		}
-		if (invalidInput || RegExp("[a-z0-9]$").test(textFieldNodes[2].value) == false) {
-			formAlert("Please make sure all fields are valid.", "warning")
+		
+			invalidInput = false
 			for (x = 0; x < textFieldNodes.length; x++) {
-				textFieldNodes[x].classList.remove("default")
+				if (!textFieldNodes[x].validity.valid) {
+					invalidInput = true
+				}
 			}
-			return false
+			if (invalidInput || !RegExp("[a-z0-9]$").test(textFieldNodes[2].value)) {
+				formAlert("Please make sure all fields are valid.", "warning")
+				for (x = 0; x < textFieldNodes.length; x++) {
+					textFieldNodes[x].classList.remove("default")
+				}
+				return false
+			}
+			else if (grecaptcha && grecaptcha.getResponse().length == 0) {
+				formAlert("Please verify that you are not a robot.", "warning")
+				return false
+			}
+			else if (!ToSPPCheckBox.checked) {
+				formAlert("Please accept our Terms of Service and Privacy Policy.", "warning")
+				return false
+			}
+			else {
+				sendForm()
+			}
 		}
-		else if (grecaptcha && grecaptcha.getResponse().length == 0) {
-			formAlert("Please verify that you are not a robot.", "warning")
-			return false
-		}
-		else if (ToSPPCheckBox.checked != true) {
-			formAlert("Please accept our Terms of Service and Privacy Policy.", "warning")
-			return false
-		}
-		sendForm()
 	}
 
 	function sendForm() {
 		httpreq = new XMLHttpRequest()
 		httpreq.onreadystatechange = function() {
+			if (this.readyState == 3) {
+				formAlert("Reee", "warning")
+			}
 			if (this.readyState == 4) {
 				if (this.status == 200) {
 					formAlert("Success! Your request for account creation with username " + textFieldNodes[2].value + " has been sent!", "success")
+				}
+				else if (this.status == 422) {
+					formAlert("Error " + this.status + ": " + this.statusText + "\nInvalid username. Please use only a-z and 0-9 in your username.", "error")
 				}
 				else if (this.status == 429) {
 					formAlert("Error " + this.status + ": " + this.statusText + "\nYou are sending too many requests and have been ratelimited. Please wait a few minutes and try again.", "error")
