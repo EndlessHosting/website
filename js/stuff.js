@@ -8,11 +8,6 @@
 
 */
 
-spartezSupportChat = {
-	url: "https://jira.theendlessweb.com",
-	portal: 1,
-}
-
 /* SideBar */
 
 var sideBar = document.querySelector(".sideBarContainer"),
