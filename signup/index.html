@@ -57,15 +57,163 @@
 			
 			<div class="header">
 				<h1>Sign Up</h1>
-				<span>Here you can sign up for an Endless Hosting account and start hosting using cPanel!</span>
+				<span>Here you can sign up for an Endless Hosting account and start hosting using our services!</span>
+				<br>
+				<a onclick="startOver()" class="button normalButton waves-effect waves-light">Start Over</a>
 			</div>
 			
 		</div>
 	
 		<!-- Sign Up Form -->
+		<div class="plansContainer" id="mainChoose">
+			<div class="plan">
+				<div class="planName">
+					<span>DirectAdmin Hosting</span>
+				</div>
+				<div class="planFeatures">
+					<span>DirectAdmin Powered</span>
+					<span>Shared Hosting</span>
+					<br>
+					<span class="colored">Our standard hosting!</span>
+				</div>
+				<div class="planPrice">
+					<span>Starting at Free</span>
+					<a onclick="gotoWebHosting()" class="button normalButton waves-effect waves-light">Select</a>
+				</div>
+			</div>
+
+			<div class="plan">
+				<div class="planName">
+					<span>VPS Hosting</span>
+				</div>
+				<div class="planFeatures">
+					<span>VPS Hosting</span>
+					<span>Proxmox Access</span>
+					<span>Dedicated IPv4+IPv6</span>
+				</div>
+				<div class="planPrice">
+					<span>Starting at $3/month</span>
+					<a onclick="gotoVpsHosting()" class="button normalButton waves-effect waves-light">Select</a>
+				</div>
+			</div>
+		</div>
 		
-		<div class="signUpContainer">
-			
+		<div class="plansContainer " id="webHostingPlans" style="display: none;"> <!-- START Web Hosting Plans Container -->
+
+			<h3>Web Hosting Plans</h3>
+			<p>Choose one of our plans and start hosting websites right now!</p>
+			<div class="plan">
+				<div class="planName">
+					<span>Free</span>
+				</div>
+				<div class="planFeatures">
+					<span>300 MBs of Storage</span>
+					<span>10 Subdomains</span>
+					<span>3 MySQL DBs</span>
+					<span>1 FTP accounts</span>
+					<span>5 GBs of Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span>No SSH Access</span>
+					<span>Can't host apps</span>
+				</div>
+				<div class="planPrice">
+					<span>Free</span>
+					<a onclick="showFreeHosting()" class="button normalButton waves-effect waves-light">Sign Up</a>
+				</div>
+			</div>
+
+			<div class="plan">
+				<div class="planName">
+					<span>Premium</span>
+				</div>
+				<div class="planFeatures">
+					<span>1.2 GBs of Storage</span>
+					<span>20 Subdomains</span>
+					<span>10 MySQL DBs</span>
+					<span>5 FTP accounts</span>
+					<span>Unlimited Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span>No SSH Access</span>
+					<span>Can't host apps</span>
+				</div>
+				<div class="planPrice">
+					<span>$3<small>USD</small>/month</span>
+					<a href="https://portal.theendlessweb.com/order/main/packages/DirectAdmin/?group_id=1&pricing_id=1" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+
+			<div class="plan">
+				<div class="planName">
+					<span>Premium+</span>
+				</div>
+				<div class="planFeatures">
+					<span>4 GBs of Storage</span>
+					<span>30 Subdomains</span>
+					<span>20 MySQL DBs</span>
+					<span>5 FTP accounts</span>
+					<span>Unlimited Bandwidth</span>
+					<span>Free SSL Certificates</span>
+					<span class="colored">SSH Access</span>
+					<span class="colored">Ability to host apps</span>
+				</div>
+				<div class="planPrice">
+					<span>$5<small>USD</small>/month</span>
+					<a href="https://portal.theendlessweb.com/order/main/packages/DirectAdmin/?group_id=1&pricing_id=5" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+
+		</div> <!-- END Web Hosting Plans Container -->
+
+		<div class="plansContainer " id="vpsPlansContainer" style="display: none;"> <!-- START VPS Hosting Plans Container -->
+			<div class="plan">
+				<div class="planName">
+					<span>MicroVPS</span>
+				</div>
+				<div class="planFeatures">
+					<span>1 GB of RAM</span>
+					<span>1 vCPU</span>
+					<span>10 GBs of HDD Storage</span>
+					<span>Operating System of choice</span>
+				</div>
+				<div class="planPrice">
+					<span>$5<small>USD</small>/month</span>
+					<a href="https://jira.theendlessweb.com/servicedesk/customer/portal/1/create/16" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+
+			<div class="plan">
+				<div class="planName">
+					<span>VPS1</span>
+				</div>
+				<div class="planFeatures">
+					<span>2 GBs of RAM</span>
+					<span>1 vCPU</span>
+					<span>25 GBs of HDD Storage</span>
+					<span>Operating System of choice</span>
+				</div>
+				<div class="planPrice">
+					<span>$10<small>USD</small>/month</span>
+					<a href="https://jira.theendlessweb.com/servicedesk/customer/portal/1/create/16" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+
+			<div class="plan">
+				<div class="planName">
+					<span>VPS2</span>
+				</div>
+				<div class="planFeatures">
+					<span>4 GB of RAM</span>
+					<span>1 vCPU</span>
+					<span>30 GBs of HDD Storage</span>
+					<span>Operating System of choice</span>
+				</div>
+				<div class="planPrice">
+					<span>$15<small>USD</small>/month</span>
+					<a href="https://jira.theendlessweb.com/servicedesk/customer/portal/1/create/16" class="button normalButton waves-effect waves-light">Buy</a>
+				</div>
+			</div>
+		</div> <!-- END VPS Hosting Plans Container -->
+		<div class="signUpContainer " id="hostingFree" style="display: none;"> <!-- START free container -->
 			<h4>Sign Up Form</h4>
 
 			<div class="alertContainer"><span></span></div>
@@ -118,7 +266,9 @@
 			</div>
 
 			<input class="button normalButton signUpSubmit" type="submit" value="Sign Up">
-				
+
+
+
 		</div>
 	
 		<!-- Footer -->
@@ -139,6 +289,7 @@
 	<script type="text/javascript" src="../js/ripple.js"></script>
 	<script type="text/javascript" src="../js/stuff.js"></script>
 	<script type="text/javascript" src="../js/preloader.js"></script>
+	<script type="text/javascript" src="../js/signup.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </html>
