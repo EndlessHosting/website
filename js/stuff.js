@@ -18,10 +18,10 @@ sideBar.innerHTML =
 			'<div class="sideBar">\n' +
 				'<h1 style="margin:0;">Endless Hosting</h1>\n' +
 				'<a href="/" class="waves-effect waves-light">Home</a>\n' +
-				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
-				'<a href="/signup/" class="waves-effect waves-light">Sign Up</a>\n' +
+				'<a href="plans/" class="waves-effect waves-light">Plans</a>\n' +
+				'<a href="signup/" class="waves-effect waves-light">Sign Up</a>\n' +
 				//'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
-				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
+				'<a href="faq/" class="waves-effect waves-light">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
 				'<a href="https://da.theendlessweb.com:2222/" class="waves-effect waves-light">Web Panel</a>\n' +
 			'</div>\n' +
@@ -37,10 +37,10 @@ navBar.innerHTML =
 			
 			'<div class="links">\n' +
 				'<a href="/" class="waves-effect waves-light">Home</a>\n' +
-				'<a href="/plans/" class="waves-effect waves-light">Plans</a>\n' +
-				'<a href="/signup/" class="waves-effect waves-light">Sign Up</a>\n' +
+				'<a href="plans/" class="waves-effect waves-light">Plans</a>\n' +
+				'<a href="signup/" class="waves-effect waves-light">Sign Up</a>\n' +
 				//'<a href="/about/" class="waves-effect waves-light">About</a>\n' +
-				'<a href="/faq/" class="waves-effect waves-light">FAQ</a>\n' +
+				'<a href="faq/" class="waves-effect waves-light">FAQ</a>\n' +
 				'<a href="https://support.theendlessweb.com/" class="waves-effect waves-light">Support</a>\n' +
 				'<a href="https://da.theendlessweb.com:2222/" class="waves-effect waves-light">Web Panel</a>\n' +
 			'</div>'
