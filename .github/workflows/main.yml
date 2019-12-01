@@ -11,13 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-    
-    - name: Commit files
-      run: |
-        git config --local user.email "support@theendlessweb.com"
-        git config --local user.name "EH Robot"
-        git commit -m "Publish changes from EndlessHosting/website" -a
+    - uses: actions/checkout@master   
         
     - name: GitHub Push
       uses: ad-m/github-push-action@master
