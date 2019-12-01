@@ -17,7 +17,7 @@ jobs:
         # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
-        repository: EndlessHosting/endlesshosting.github.io
+        repository: https://github.com/EndlessHosting/endlesshosting.github.io.git
         # Destination branch to push changes
         branch: master
         # Determines if force push is used
