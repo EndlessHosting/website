@@ -12,8 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - name: Create local changes
-      
+    
     - name: Commit files
       run: |
         git config --local user.email "support@theendlessweb.com"
