@@ -64,7 +64,7 @@ document.querySelector(".footerContainer").innerHTML =
 						'<i class="eh eh-github"></i>\n' +
 						'<p>Github</p>\n' +
 					'</a>\n' +
-					'<a href="https://discord.gg/jVa63vC/" target="_blank" class="linkWrap">\n' +
+					'<a href="https://discord.gg/jVa63vC" target="_blank" class="linkWrap">\n' +
 						'<i class="eh eh-discord"></i>\n' +
 						'<p>Discord</p>\n' +
 					'</a>\n' +
