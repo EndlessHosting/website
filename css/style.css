@@ -84,6 +84,12 @@ body {
 	z-index: 10
 }
 
+.aboutPage .button {
+  width: 240px;
+  display: block;
+  margin: auto;
+}
+
 .menu {
 	display: none;
 	width: 42px;
@@ -819,12 +825,6 @@ input:focus ~ .bar:after,input:focus ~ .bar:before,input:not([value=""]) ~ .bar:
 	}
 	.navBar .links,.linkWrap p,.faqPage .question .triangleHolder {
 		display: none
-	}
-	.footerContainer {
-		height: 300px
-	}
-	.footer {
-		height: 250px
 	}
 	.footer .wrap {
 		display: block;
